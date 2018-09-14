@@ -2,9 +2,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.0.88:3306/mybaby?useUnicode=true&characterEncoding=utf8
-    username: mybaby
-    password: mybaby20170606
+    url: jdbc:mysql://localhost:3306/babynoindex?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 221661
 
 
 ###############################################
