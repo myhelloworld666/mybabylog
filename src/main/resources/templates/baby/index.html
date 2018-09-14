@@ -9,10 +9,10 @@
 <div class="baby_a">
     <div class="am-g am-container">
         <div class="am-u-lg-12 am-u-md-6 am-u-sm-12">
-            <h1 th:text="'Name:'+${baby.name}">Name:XXX</h1>
+            <h1 th:text="'您的宝宝:'+${baby.name}">Name:XXX</h1>
 
-            <p th:text="'出生于:'+${#dates.format(baby.brithday, 'yyyy-MM-dd')}+'，年龄:'+${baby.getAge()}+'，您的孩子已经出生：'+${baby.getBetweenDay()}+'天了。 系统中共有'+${count}+'条关于杨瑞曦的记录。'">
-                出生于:2012-03-22，年龄:1，您的孩子已经出生：88天了。 系统中共有88条关于杨瑞曦的记录。
+            <p th:text="'出生于:'+${#dates.format(baby.brithday, 'yyyy-MM-dd')}+'，年龄:'+${baby.getAge()}+'，您的孩子已经出生：'+${baby.getBetweenDay()}+'天了。 系统中共有'+${count}+'条关于宝宝的记录。'">
+
             </p>
             <a type="button" class="am-btn am-btn-success am-btn-primary am-radius" th:href="@{/baby/blog/}">点击查看所有记录</a>
         </div>
