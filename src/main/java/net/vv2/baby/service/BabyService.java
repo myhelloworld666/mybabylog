@@ -43,4 +43,10 @@ public interface BabyService {
      * @return List<Baby>
      */
     List<Baby> selectAllBaby();
+
+    /**
+     * 根据partent_id返回所有baby列表
+     * @return List<Baby>
+     */
+    List<Baby> selectBabyBypId(Integer partent_id);
 }

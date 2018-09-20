@@ -2,7 +2,10 @@ package net.vv2.admin.web;
 
 import com.xiaoleilu.hutool.date.DateUtil;
 import net.vv2.baby.domain.Baby;
+import net.vv2.baby.domain.User;
+import net.vv2.baby.service.UserService;
 import net.vv2.baby.service.impl.BabyServiceImpl;
+import net.vv2.baby.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +25,8 @@ import java.util.List;
 public class AdminBabyController {
     @Autowired
     private BabyServiceImpl babyService;
+    @Autowired
+    private UserServiceImpl UserService;
 
 
     /**
@@ -41,7 +46,10 @@ public class AdminBabyController {
      * @return
      */
     @RequestMapping("/addBaby")
-    public String addBaby(){
+    public String addBaby(Model model){
+        List<User> plist = UserService.selectAll();
+        System.out.println("------------------------------------------"+plist);
+        model.addAttribute("plist",plist);
         return "/admin/baby/addBaby";
     }
 

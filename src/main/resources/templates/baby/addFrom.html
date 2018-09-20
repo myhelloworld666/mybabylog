@@ -22,7 +22,7 @@
                         <label for="baby_id" class="am-u-sm-3 am-form-label">宝贝 / Baby</label>
                         <div class="am-u-sm-9 am-radio">
                             <select  name="baby_id" id="baby_id">
-                                <option th:each="baby : ${list}" th:value="${baby.id}" th:text="${baby.name}"></option>
+                                <option th:each="baby : ${blist}" th:value="${baby.id}" th:text="${baby.name}"></option>
                             </select>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                         <label for="baby_id" class="am-u-sm-3 am-form-label">宝贝 / Baby</label>
                         <div class="am-u-sm-9 am-radio">
                             <select  name="baby_id" id="baby_id">
-                                <option th:each="baby : ${list}" th:value="${baby.id}" th:text="${baby.name}"></option>
+                                <option th:each="baby : ${blist}" th:value="${baby.id}" th:text="${baby.name}"></option>
                             </select>
                         </div>
                     </div>

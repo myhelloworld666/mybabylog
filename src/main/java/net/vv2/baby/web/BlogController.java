@@ -48,12 +48,14 @@ public class BlogController {
      * @return
      */
     @RequestMapping(value = "/home")
-    public String index(Model model){
-
-        //孩子信息相关
+    public String index(Model model,HttpSession session){
+      //  List<Baby> blist = babyService.selectAllBaby();
+      //  User partent = (User) session.getAttribute("user");//获取当前登陆的家长
+       // List<Baby> blist = babyService.selectBabyBypId(partent.getId());
         Baby baby = babyService.selectBabyById(1);//获取宝贝资料，当然如果有二个或以上的孩子，建议获取所有宝贝。
         int count = blogService.selectCount();//返回总记录数
-        System.out.println(count);
+       // System.out.println("----------------------------------"+partent.getId());
+      //  System.out.println("----------------------------------"+blist);
 
 //        那年今天数据
         Date today = DateUtil.date();
@@ -65,6 +67,7 @@ public class BlogController {
         List<Blog> list = blogService.selectOldBlog("04","15",year);//测试那年今天的历史数据
 
         model.addAttribute("baby",baby);
+      //  model.addAttribute("blist",blist);
         model.addAttribute("count",count);
         model.addAttribute("list",list);
         return "/baby/index";
@@ -72,8 +75,9 @@ public class BlogController {
 
     @RequestMapping("/add")
     public String addFrom(Model model){
-    	List<Baby> list = babyService.selectAllBaby();
-    	model.addAttribute("list", list);
+    	List<Baby> blist = babyService.selectAllBaby();
+      //  System.out.println("------------------------------------------"+blist);
+    	model.addAttribute("blist", blist);
         return "/baby/addFrom";
     }
 

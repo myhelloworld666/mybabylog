@@ -1,7 +1,12 @@
 package net.vv2.baby.web;
 
 import com.xiaoleilu.hutool.crypto.SecureUtil;
+import com.xiaoleilu.hutool.date.DateUtil;
+import net.vv2.baby.domain.Baby;
+import net.vv2.baby.domain.Blog;
 import net.vv2.baby.domain.User;
+import net.vv2.baby.service.impl.BabyServiceImpl;
+import net.vv2.baby.service.impl.BlogServiceImpl;
 import net.vv2.baby.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +17,10 @@ import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author J.Sky bosichong@qq.com
@@ -24,6 +33,10 @@ public class LoginController {
 
     @Autowired
     private UserServiceImpl userService;
+    @Autowired
+    private BlogServiceImpl blogService;
+    @Autowired
+    private BabyServiceImpl babyService;
 
     @RequestMapping("/login")
     public String login() {
@@ -44,17 +57,18 @@ public class LoginController {
                                   ModelAndView mv) {
         System.out.println("开始验证登陆------------");
         User user = userService.selectUserByNameAndPassword(username, SecureUtil.md5(password));
+     //   System.out.println(user.getId());
         System.out.println("验证登陆用户和法性------------");
         String msg = "";
         String url = "";
         if (user != null) {
             msg = user.getName() + " 欢迎您登陆您成功！";
             url = "<meta http-equiv=\"refresh\" content=\"1;url=baby/home/\">";
-            System.out.println("登陆成功！");
+            System.out.println("登陆成功！"+user.getId());
             mv.addObject("user", user);
             mv.addObject("msg", msg);
             mv.addObject("url", url);
-            mv.setViewName("/success");
+           mv.setViewName("/success");
             return mv;
         } else {
             msg = "登陆失败，用户名或密码错误！";

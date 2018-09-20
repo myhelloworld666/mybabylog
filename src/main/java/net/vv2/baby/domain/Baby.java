@@ -12,6 +12,7 @@ import java.util.Date;
  **/
 public class Baby {
     private Integer id;
+    private Integer partent_id;
     private String name;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date brithday;
@@ -24,6 +25,10 @@ public class Baby {
 
     public Integer getId() {
         return id;
+    }
+
+    public Integer getPartent_id() {
+        return partent_id;
     }
 
     public String getName() {
@@ -50,6 +55,7 @@ public class Baby {
     public String toString() {
         return "baby{" +
                 "id=" + id +
+                ",partent_id="+partent_id+
                 ", name='" + name + '\'' +
                 ", brithday=" + brithday +
                 '}';

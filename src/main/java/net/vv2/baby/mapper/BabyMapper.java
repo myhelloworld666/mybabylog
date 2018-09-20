@@ -54,6 +54,13 @@ public interface BabyMapper {
     @Select("select * from bb_baby")
     List<Baby> selectAllBaby();
 
+    /**
+     * 根据partent_id返回所有baby列表
+     * @teturn List<Baby>
+     */
+    @Select("select * from bb_baby where partent_id = #{partent_id}")
+    List<Baby> selectBabyBypId(Integer partent_id);
+
 
 
 }

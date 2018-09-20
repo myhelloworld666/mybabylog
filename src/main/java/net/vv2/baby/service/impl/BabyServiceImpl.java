@@ -44,4 +44,9 @@ public class BabyServiceImpl implements BabyService {
     public List<Baby> selectAllBaby() {
         return babyMapper.selectAllBaby();
     }
+
+    @Override
+    public List<Baby> selectBabyBypId(Integer partent_id) { return babyMapper.selectBabyBypId(partent_id); }
+
+
 }
