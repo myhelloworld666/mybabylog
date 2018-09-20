@@ -62,9 +62,10 @@ public class AdminBabyController {
      */
     @RequestMapping("/saveBaby")
     public ModelAndView saveBaby(String name,
+                                 Integer partent_id,
                                  String brithday,
                                  ModelAndView mv){
-        Baby baby = new Baby(name, DateUtil.parse(brithday));
+        Baby baby = new Baby(name,partent_id,DateUtil.parse(brithday));
         return returnMv((babyService.addBaby(baby)>0),mv);
 
     }

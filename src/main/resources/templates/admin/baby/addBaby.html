@@ -32,16 +32,15 @@
                         </div>
                     </div>
 
-                  <!--  <div class="am-form-group">
+                   <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-2 am-form-label">Partent</label>
                         <div class="am-u-sm-10">
-                       &lt;!&ndash;     <input type="text" id="user-name" name="name" placeholder="BabyName">&ndash;&gt;
                             <select  name="partent_id" id="partent_id">
-                                <option th:each="partent : ${plist}" th:value="${user.id}" th:text="${user.name}"></option>
+                                <option th:each="partent : ${plist}" th:value="${partent.id}" th:text="${partent.name}"></option>
                             </select>
-
+                            <!---->
                         </div>
-                    </div>-->
+                    </div>
 
                     <div class="am-form-group">
                         <label for="user-brithday" class="am-u-sm-2 am-form-label">brithday</label>

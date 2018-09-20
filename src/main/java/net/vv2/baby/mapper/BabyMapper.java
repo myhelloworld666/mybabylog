@@ -18,7 +18,7 @@ public interface BabyMapper {
       * @param baby
      * @return
      */
-    @Insert("insert into bb_baby (name,brithday) values(#{name},#{brithday})")
+    @Insert("insert into bb_baby (name,brithday,partent_id) values(#{name},#{brithday},#{partent_id})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     int addBaby(Baby baby);
 

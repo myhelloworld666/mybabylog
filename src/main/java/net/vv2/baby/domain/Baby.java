@@ -22,6 +22,11 @@ public class Baby {
         this.name = name;
         this.brithday = brithday;
     }
+    public Baby(String name,Integer partent_id,Date brithday) {
+        this.name = name;
+        this.partent_id = partent_id;
+        this.brithday = brithday;
+    }
 
     public Integer getId() {
         return id;
