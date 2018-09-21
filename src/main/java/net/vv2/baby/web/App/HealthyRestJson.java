@@ -1,12 +1,14 @@
 package net.vv2.baby.web.App;
 
 import com.xiaoleilu.hutool.date.DateUtil;
+import net.vv2.baby.domain.Baby;
 import net.vv2.baby.domain.Healthy;
 import net.vv2.baby.service.impl.HealthyServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -26,11 +28,13 @@ public class HealthyRestJson {
     private HealthyServiceImpl healthyService;
 
     @RequestMapping("/HealthyRestJson")
-    public HashMap<String,ArrayList<String>> getHealthyRestJson(){
+    public HashMap<String,ArrayList<String>> getHealthyRestJson(HttpSession session){
         HashMap<String,ArrayList<String>> healthyMap = new HashMap();
+        Baby mababy = (Baby) session.getAttribute("baby");
+       // System.out.println("----------------------------------"+mababy);
 
-        List<Healthy> healthies = healthyService.selectAll();
-        System.out.println(healthies);
+        List<Healthy> healthies = healthyService.selectAllByBId(mababy.getId());
+       // System.out.println(healthies);
         ArrayList<String> heights = new ArrayList<String>();
         ArrayList<String> weights = new ArrayList<String>();
         ArrayList<String> times = new ArrayList<String>();

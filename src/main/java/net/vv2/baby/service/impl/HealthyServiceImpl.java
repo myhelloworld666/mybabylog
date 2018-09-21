@@ -39,6 +39,11 @@ public class HealthyServiceImpl implements HealthyService {
     }
 
     @Override
+    public List<Healthy> selectAllByBId(Integer baby_id) {
+        return healthyMapper.selectAllByBId(baby_id);
+    }
+
+    @Override
     public Healthy selectHealthyById(Integer id) {
         return healthyMapper.selectHealthyById(id);
     }

@@ -10,14 +10,15 @@
     <div class="am-g am-container">
         <div class="am-u-lg-12 am-u-md-6 am-u-sm-12">
             <h1 th:text="'您的宝宝:'+${baby.name}">Name:XXX</h1>
-          <!--  <select  name="baby_id" id="baby_id">
-                <option th:each="baby : ${blist}" th:value="${baby.id}" th:text="${baby.name}"></option>
-            </select>-->
+          <!--  /{bid}(bid=${mybaby.id})-->
 
             <p th:text="'出生于:'+${#dates.format(baby.brithday, 'yyyy-MM-dd')}+'，年龄:'+${baby.getAge()}+'，您的孩子已经出生：'+${baby.getBetweenDay()}+'天了。 系统中有关于'+${baby.name}+'的'+${hcount}+'条健康记录和'+${count}+'条日志记录。'">
-
             </p>
             <a type="button" class="am-btn am-btn-success am-btn-primary am-radius" th:href="@{/baby/blog/}">点击查看所有记录</a>
+            <p>点击查看您的其他宝宝</p>
+            <select  name="baby_id" id="baby_id" onchange="self.location.href=options[selectedIndex].value">
+            <option th:each="mybaby : ${blist}" th:value="@{/baby/home}" th:text="${mybaby.name}" ></option>
+            </select>
         </div>
     </div>
 </div>

@@ -38,6 +38,13 @@ public interface HealthyService {
      */
     public List<Healthy> selectAll();
 
+    /**
+     * 根据baby_id返回所有 Healthy 数据
+     * 用于绘制echart
+     * @return list
+     */
+    public List<Healthy> selectAllByBId(Integer baby_id);
+
 
     /**
      * 根据ID搜索

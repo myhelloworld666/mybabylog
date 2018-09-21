@@ -57,7 +57,7 @@ public class BlogController {
         int count = blogService.selectCount(baby.getId());//返回baby对应日志总记录数
         int hcount = healthyService.selectCount(baby.getId());//返回baby对应健康总记录数
        //System.out.println("----------------------------------"+hcount);
-      //  System.out.println("----------------------------------"+blist);
+      // System.out.println("----------------------------------"+bid);
 
 //        那年今天数据
         Date today = DateUtil.date();
@@ -66,10 +66,12 @@ public class BlogController {
         String month = DateUtil.month(today)+1+"";
         String day = DateUtil.dayOfMonth(today)+"";
        // List<Blog> list = blogService.selectOldBlog(month,day,year);//获得那年今天的历史数据
+        //List<Blog> list = blogService.selectAllFirst();
         List<Blog> list = blogService.selectOldBlog("04","15",year);//测试那年今天的历史数据
 
         model.addAttribute("baby",baby);
-      //  model.addAttribute("blist",blist);
+        session.setAttribute("baby",baby);
+        model.addAttribute("blist",blist);
         model.addAttribute("count",count);
         model.addAttribute("hcount",hcount);
         model.addAttribute("list",list);

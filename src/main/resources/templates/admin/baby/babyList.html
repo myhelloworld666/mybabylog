@@ -26,6 +26,7 @@
                             <th>ID</th>
                             <th>name</th>
                             <th>生日</th>
+                            <th>父母ID</th>
                             <th>编辑删除</th>
                         </tr>
                         </thead>
@@ -34,6 +35,7 @@
                             <td th:text="${baby.id}">1</td>
                             <td th:text="${baby.name}">John Clark</td>
                             <td th:text="${#calendars.format(baby.brithday,'yyyy-MM-dd')}"></td>
+                            <td th:text="${baby.partent_id}">John Clark</td>
                             <td>
                                 <div class="am-dropdown" data-am-dropdown="">
                                     <button class="am-btn am-btn-default am-btn-xs am-dropdown-toggle"

@@ -58,6 +58,24 @@ public interface HealthyMapper {
     List<Healthy> selectAll();
 
     /**
+     * 根据baby_id返回所有 Healthy 数据
+     * 用于绘制echart
+     * @return list
+     */
+    @Select("select * from bb_healthy where baby_id = #{baby_id}")
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "height",property = "height"),
+            @Result(column = "weight",property = "weight"),
+            @Result(column = "create_time",property = "create_time"),
+            @Result(column = "baby_id",property = "baby",
+                    one = @One(
+                            select = "net.vv2.baby.mapper.BabyMapper.selectBabyById",
+                            fetchType = FetchType.EAGER))
+    })
+    List<Healthy> selectAllByBId(Integer baby_id);
+
+    /**
      * 根据ID 搜索返回
      * @param id
      * @return
