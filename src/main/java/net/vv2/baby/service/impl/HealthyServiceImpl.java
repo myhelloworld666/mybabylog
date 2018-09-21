@@ -42,4 +42,9 @@ public class HealthyServiceImpl implements HealthyService {
     public Healthy selectHealthyById(Integer id) {
         return healthyMapper.selectHealthyById(id);
     }
+
+    @Override
+    public int selectCount(Integer baby_id) {
+        return healthyMapper.selectCount(baby_id);
+    }
 }

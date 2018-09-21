@@ -2,7 +2,8 @@ CREATE TABLE bb_baby
 (
     id TINYINT(4) PRIMARY KEY NOT NULL AUTO_INCREMENT,
     name VARCHAR(32) NOT NULL,
-    brithday DATE NOT NULL
+    brithday DATE NOT NULL,
+    partent_id INT(11) NOT NULL
 );
 
 

@@ -74,4 +74,10 @@ public interface HealthyMapper {
                             fetchType = FetchType.EAGER))
     })
     Healthy selectHealthyById(Integer id);
+
+    /**
+     * 根据baby_id获取所有记录数量
+     */
+    @Select("select count(*) from bb_healthy where baby_id = #{baby_id}")
+    int selectCount(Integer baby_id);
 }

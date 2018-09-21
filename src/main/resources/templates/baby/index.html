@@ -14,7 +14,7 @@
                 <option th:each="baby : ${blist}" th:value="${baby.id}" th:text="${baby.name}"></option>
             </select>-->
 
-            <p th:text="'出生于:'+${#dates.format(baby.brithday, 'yyyy-MM-dd')}+'，年龄:'+${baby.getAge()}+'，您的孩子已经出生：'+${baby.getBetweenDay()}+'天了。 系统中共有'+${count}+'条关于'+${baby.name}+'的记录。'">
+            <p th:text="'出生于:'+${#dates.format(baby.brithday, 'yyyy-MM-dd')}+'，年龄:'+${baby.getAge()}+'，您的孩子已经出生：'+${baby.getBetweenDay()}+'天了。 系统中有关于'+${baby.name}+'的'+${hcount}+'条健康记录和'+${count}+'条日志记录。'">
 
             </p>
             <a type="button" class="am-btn am-btn-success am-btn-primary am-radius" th:href="@{/baby/blog/}">点击查看所有记录</a>

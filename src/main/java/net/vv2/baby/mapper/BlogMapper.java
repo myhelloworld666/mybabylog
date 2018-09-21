@@ -222,8 +222,8 @@ public interface BlogMapper {
      * 返回记录条数
      * @return
      */
-    @Select("select count(*) from bb_blog")
-    int selectCount();
+    @Select("select count(*) from bb_blog where baby_id = #{baby_id}")
+    int selectCount(Integer baby_id);
 
 
 

@@ -45,4 +45,9 @@ public interface HealthyService {
      * @return
      */
     Healthy selectHealthyById(Integer id);
+
+    /**
+     * 根据baby_id获取所有记录数量
+     */
+    int selectCount(Integer baby_id);
 }

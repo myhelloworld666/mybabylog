@@ -74,7 +74,7 @@ public interface BlogService {
      * 返回 表中的日记条数
      * @return int
      */
-    int selectCount();
+    int selectCount(Integer baby_id);
 
 
     /**

@@ -88,12 +88,12 @@ public class BlogTest {
 
     @Test
     public void selectCount(){
-        System.out.println(blogService.selectCount());
+        System.out.println(blogService.selectCount(1));
     }
 
     @Test
     public void selectPage(){
-        PageHelp pageHelp = new PageHelp(blogService.selectCount(),1,50);
+        PageHelp pageHelp = new PageHelp(blogService.selectCount(1),1,50);
         System.out.println(pageHelp.getPageArray()[0]);
 
     }

@@ -36,6 +36,16 @@
                         </div>
                     </div>
 
+                    <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-2 am-form-label">Partent</label>
+                        <div class="am-u-sm-10">
+                            <select  name="partent_id" id="partent_id">
+                                <option th:each="partent : ${plist}" th:value="${partent.id}" th:text="${partent.name}"></option>
+                            </select>
+                            <!---->
+                        </div>
+                    </div>
+
 
 
                     <div class="am-form-group">

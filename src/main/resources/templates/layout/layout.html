@@ -71,6 +71,7 @@
 
                 <div class="am-topbar-right">
                     <!--<p th:text="'您好:'+${session.user.name}">显示用户名</p>-->
+                     <a class="am-btn am-btn-success am-radius am-topbar-btn" th:text="'您好:'+${session.user.name}">显示用户名</a>
                       <a class="am-btn am-btn-success am-radius am-topbar-btn" th:href="@{/logout}"><span class="am-icon-sign-out"></span>退出登陆</a>
                   </div>
 

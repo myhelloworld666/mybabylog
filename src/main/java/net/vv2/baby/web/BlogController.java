@@ -50,11 +50,13 @@ public class BlogController {
     @RequestMapping(value = "/home")
     public String index(Model model,HttpSession session){
       //  List<Baby> blist = babyService.selectAllBaby();
-      //  User partent = (User) session.getAttribute("user");//获取当前登陆的家长
-       // List<Baby> blist = babyService.selectBabyBypId(partent.getId());
-        Baby baby = babyService.selectBabyById(1);//获取宝贝资料，当然如果有二个或以上的孩子，建议获取所有宝贝。
-        int count = blogService.selectCount();//返回总记录数
-       // System.out.println("----------------------------------"+partent.getId());
+        User partent = (User) session.getAttribute("user");//获取当前登陆的家长
+        List<Baby> blist = babyService.selectBabyBypId(partent.getId());//获取当前用户的所有baby
+       Baby baby = blist.get(0);//返回了第一个baby这里可以做文章获取前端想要的baby
+       // Baby baby = babyService.selectBabyById(1);//获取宝贝资料，当然如果有二个或以上的孩子，建议获取所有宝贝。
+        int count = blogService.selectCount(baby.getId());//返回baby对应日志总记录数
+        int hcount = healthyService.selectCount(baby.getId());//返回baby对应健康总记录数
+       //System.out.println("----------------------------------"+hcount);
       //  System.out.println("----------------------------------"+blist);
 
 //        那年今天数据
@@ -69,14 +71,17 @@ public class BlogController {
         model.addAttribute("baby",baby);
       //  model.addAttribute("blist",blist);
         model.addAttribute("count",count);
+        model.addAttribute("hcount",hcount);
         model.addAttribute("list",list);
         return "/baby/index";
     }
 
     @RequestMapping("/add")
-    public String addFrom(Model model){
-    	List<Baby> blist = babyService.selectAllBaby();
-        System.out.println("------------------------------------------"+blist);
+    public String addFrom(Model model,HttpSession session){
+    	//List<Baby> blist = babyService.selectAllBaby();
+        User partent = (User) session.getAttribute("user");//获取当前登陆的家长
+        List<Baby> blist = babyService.selectBabyBypId(partent.getId());//获取当前用户的所有baby
+       // System.out.println("------------------------------------------"+blist);
     	model.addAttribute("blist", blist);
         return "/baby/addFrom";
     }

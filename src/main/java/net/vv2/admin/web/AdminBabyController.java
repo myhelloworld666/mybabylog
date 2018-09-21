@@ -29,6 +29,7 @@ public class AdminBabyController {
     private UserServiceImpl UserService;
 
 
+
     /**
      * 宝贝列表页
      * @param model
@@ -80,6 +81,9 @@ public class AdminBabyController {
     public String editBaby(@PathVariable Integer id,
                            Model model){
         Baby baby = babyService.selectBabyById(id);
+        List<User> plist = UserService.selectAll();
+        System.out.println("------------------------------------------"+plist);
+        model.addAttribute("plist",plist);
         model.addAttribute("baby",baby);
         return "/admin/baby/editBaby";
 
@@ -98,13 +102,15 @@ public class AdminBabyController {
     @RequestMapping("/updBaby")
     public ModelAndView updBaby(Integer id,
                                 String name,
+                                Integer partent_id,
                                 String brithday,
                                 ModelAndView mv){
-        Baby baby = new Baby();
+//        Baby baby = new Baby();
+//
+//        baby.setName(name);
+//        baby.setBrithday(DateUtil.parse(brithday));
+        Baby baby = new Baby(name,partent_id,DateUtil.parse(brithday));
         baby.setId(id);
-        baby.setName(name);
-        baby.setBrithday(DateUtil.parse(brithday));
-
         return returnMv((babyService.updBaby(baby)>0),mv);
 
 

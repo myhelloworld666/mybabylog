@@ -60,8 +60,8 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public int selectCount() {
-        return blogMapper.selectCount();
+    public int selectCount(Integer baby_id) {
+        return blogMapper.selectCount(baby_id);
     }
 
     @Override

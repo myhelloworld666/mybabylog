@@ -27,7 +27,7 @@ public interface BabyMapper {
      * @param baby
      * @return
      */
-    @Update("update bb_baby set name = #{name},brithday = #{brithday} where id = #{id}")
+    @Update("update bb_baby set name = #{name},brithday = #{brithday},partent_id = #{partent_id} where id = #{id}")
     int updBaby(Baby baby);
 
 
