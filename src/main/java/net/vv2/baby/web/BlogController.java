@@ -44,20 +44,37 @@ public class BlogController {
 
     /**
      * 首页
+     * @param id
      * @param model
      * @return
      */
-    @RequestMapping(value = "/home")
-    public String index(Model model,HttpSession session){
+    @RequestMapping(value = "/home/{id}")
+    public String index(@PathVariable Integer id,Model model,HttpSession session){
       //  List<Baby> blist = babyService.selectAllBaby();
         User partent = (User) session.getAttribute("user");//获取当前登陆的家长
         List<Baby> blist = babyService.selectBabyBypId(partent.getId());//获取当前用户的所有baby
-       Baby baby = blist.get(0);//返回了第一个baby这里可以做文章获取前端想要的baby
+        Baby baby = new Baby();
+        if(id==-1){
+            baby = blist.get(0);//返回当前用户对应babylist的第一个baby
+            //System.out.println("----------------------------------"+baby);
+            session.setAttribute("baby",baby);//echart绘制所需
+        }
+        else if(id==0) {
+            baby = (Baby)session.getAttribute("baby");
+        }
+        else {
+            baby = babyService.selectBabyById(id);//返回选中的baby
+            session.setAttribute("bid",id);
+//            System.out.println("----------------------------------"+id);
+//            System.out.println("----------------------------------"+baby.getName());
+            session.setAttribute("baby",baby);//echart绘制所需
+        }
+
        // Baby baby = babyService.selectBabyById(1);//获取宝贝资料，当然如果有二个或以上的孩子，建议获取所有宝贝。
         int count = blogService.selectCount(baby.getId());//返回baby对应日志总记录数
         int hcount = healthyService.selectCount(baby.getId());//返回baby对应健康总记录数
        //System.out.println("----------------------------------"+hcount);
-      // System.out.println("----------------------------------"+bid);
+       //System.out.println("----------------------------------"+id);
 
 //        那年今天数据
         Date today = DateUtil.date();
@@ -70,13 +87,51 @@ public class BlogController {
         List<Blog> list = blogService.selectOldBlog("04","15",year);//测试那年今天的历史数据
 
         model.addAttribute("baby",baby);
-        session.setAttribute("baby",baby);
+
+      //  session.setAttribute("blist",blist);
         model.addAttribute("blist",blist);
         model.addAttribute("count",count);
         model.addAttribute("hcount",hcount);
         model.addAttribute("list",list);
         return "/baby/index";
     }
+//    /**
+//     * 首页
+//     * @param id
+//     * @param model
+//     * @return
+//     */
+//    @RequestMapping(value = "/changebaby/{id}")
+//    public String changebaby(@PathVariable Integer id,Model model,HttpSession session){
+//        //  List<Baby> blist = babyService.selectAllBaby();
+//        User partent = (User) session.getAttribute("user");//获取当前登陆的家长
+//        List<Baby> blist = babyService.selectBabyBypId(partent.getId());//获取当前用户的所有baby
+//        Baby baby = babyService.selectBabyById(id);//返回选中的baby
+//        // Baby baby = babyService.selectBabyById(1);//获取宝贝资料，当然如果有二个或以上的孩子，建议获取所有宝贝。
+//        int count = blogService.selectCount(baby.getId());//返回baby对应日志总记录数
+//        int hcount = healthyService.selectCount(baby.getId());//返回baby对应健康总记录数
+//        //System.out.println("----------------------------------"+hcount);
+//        // System.out.println("----------------------------------"+baby_id);
+//
+////        那年今天数据
+//        Date today = DateUtil.date();
+//        String year = DateUtil.year(today)+"";
+//        System.out.println(year);
+//        String month = DateUtil.month(today)+1+"";
+//        String day = DateUtil.dayOfMonth(today)+"";
+//        // List<Blog> list = blogService.selectOldBlog(month,day,year);//获得那年今天的历史数据
+//        //List<Blog> list = blogService.selectAllFirst();
+//        List<Blog> list = blogService.selectOldBlog("04","15",year);//测试那年今天的历史数据
+//
+//        model.addAttribute("baby",baby);
+//        session.setAttribute("baby",baby);
+//        //  session.setAttribute("blist",blist);
+//        model.addAttribute("blist",blist);
+//        model.addAttribute("count",count);
+//        model.addAttribute("hcount",hcount);
+//        model.addAttribute("list",list);
+//        return "/baby/index";
+//    }
 
     @RequestMapping("/add")
     public String addFrom(Model model,HttpSession session){
@@ -189,10 +244,12 @@ public class BlogController {
         System.out.println("开始查询分页数据");
         PageHelp pageHelp = new PageHelp(blogService.selectKeyCount(key),pageNum,rows);
         List<Blog> list = blogService.selectPageBlog(key,pageHelp.getPageArray()[1],pageHelp.getRows());
-        System.out.println("++++++++++++++++++"+pageHelp.getCount());
+        //System.out.println("++++++++++++++++++"+pageHelp.getCount());
         model.addAttribute("totalPage",pageHelp.getPageArray()[0]);
         model.addAttribute("pageNum",pageNum);
         model.addAttribute("key",key);
+        //Blog b = (Blog)list.get(0);
+       // System.out.println("++++++++++++++++++"+b.getBetween()[0]);
         model.addAttribute("list",list);
         return "/baby/blog";
     }
