@@ -1,8 +1,45 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="layout/layout :: htmlhead(title='Baby Log 首页')"></head>
-<body class="am-with-topbar-fixed-top am-scrollable-vertical">
-<script>
+<body class="am-with-topbar-fixed-top am-scrollable-vertical" onload="setindex()">
+<script th:inline="javascript">
+    function changebaby() {
+        var obje = document.getElementById("baby_id");//定位select
+      //  obje.selectedIndex = 1;
+        var index = obje.selectedIndex;//获取索引
+        var value = obje.options[index].value;//选中值
+        //obje.options[1].selected = true;
+
+        // var xmlhttp;
+        // if (window.XMLHttpRequest)
+        // {// code for IE7+, Firefox, Chrome, Opera, Safari
+        //     xmlhttp=new XMLHttpRequest();
+        // }
+        // else
+        // {// code for IE6, IE5
+        //     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        // }
+
+        // alert(id);
+        // alert(value);
+        // alert(value+id);
+        var addres = value+index;//返回的url
+        window.location.href=addres;//跳转回后端处理
+       // alert(addres);
+       //  xmlhttp.open("POST",addres,false);
+       //  xmlhttp.send();
+       // alert(xmlhttp.responseText);
+
+    }
+    function setindex() {
+        var obje = document.getElementById("baby_id");//定位select
+        //  obje.selectedIndex = 1;
+       //
+       // alert("textbackindex");
+        var backindex =[[${index}]];
+       // alert("backindex="+backindex);
+        obje.options[backindex].selected = true;
+    }
 
 </script>
 
@@ -13,14 +50,14 @@
     <div class="am-g am-container">
         <div class="am-u-lg-12 am-u-md-6 am-u-sm-12">
             <h1 th:text="'您的宝宝:'+${baby.name}">Name:XXX</h1>
-          <!--  /{bid}(bid=${mybaby.id})-->
+          <!--  onchange= "self.location.href=options[selectedIndex].value"--{id}(id=${mybaby.id})-->
 
             <p th:text="'出生于:'+${#dates.format(baby.brithday, 'yyyy-MM-dd')}+'，年龄:'+${baby.getAge()}+'，您的孩子已经出生：'+${baby.getBetweenDay()}+'天了。 系统中有关于'+${baby.name}+'的'+${hcount}+'条健康记录和'+${count}+'条日志记录。'">
             </p>
             <a type="button" class="am-btn am-btn-success am-btn-primary am-radius" th:href="@{/baby/blog/}">点击查看所有记录</a>
             <p>点击查看您的其他宝宝</p>
-            <select  name="baby_id" id="baby_id" onchange="self.location.href=options[selectedIndex].value">
-            <option th:each="mybaby : ${blist}" th:value="@{/baby/home/{id}(id=${mybaby.id})}" th:text="${mybaby.name}"></option>
+            <select  name="baby_id" id="baby_id" onchange=changebaby() >
+            <option th:each="mybaby : ${blist}" th:value="@{/baby/home/}" th:text="${mybaby.name}"></option>
             </select>
         </div>
     </div>

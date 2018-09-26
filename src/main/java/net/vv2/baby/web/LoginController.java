@@ -63,7 +63,7 @@ public class LoginController {
         String url = "";
         if (user != null) {
             msg = user.getName() + " 欢迎您登陆您成功！";
-            url = "<meta http-equiv=\"refresh\" content=\"1;url=baby/home/-1\">";
+            url = "<meta http-equiv=\"refresh\" content=\"1;url=baby/home/-2\">";
            // System.out.println("登陆成功！"+user.getId());
             mv.addObject("user", user);
             mv.addObject("msg", msg);

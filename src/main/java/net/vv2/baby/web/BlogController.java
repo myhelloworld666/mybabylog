@@ -44,28 +44,31 @@ public class BlogController {
 
     /**
      * 首页
-     * @param id
+     * @param index
      * @param model
      * @return
      */
-    @RequestMapping(value = "/home/{id}")
-    public String index(@PathVariable Integer id,Model model,HttpSession session){
+    @RequestMapping(value = "/home/{index}")
+    public String index(@PathVariable Integer index,Model model,HttpSession session){
       //  List<Baby> blist = babyService.selectAllBaby();
+        //System.out.println("++++++++++++++++++++++++++++++++++"+index);
         User partent = (User) session.getAttribute("user");//获取当前登陆的家长
         List<Baby> blist = babyService.selectBabyBypId(partent.getId());//获取当前用户的所有baby
         Baby baby = new Baby();
-        if(id==-1){
-            baby = blist.get(0);//返回当前用户对应babylist的第一个baby
+        if(index==-2){//刚刚登录
+            index = 0;
+            baby = blist.get(index);//返回当前用户对应babylist的第一个baby
             //System.out.println("----------------------------------"+baby);
+            session.setAttribute("index",index);//将下拉框索引记录到会话中，作用于已经登录切换回首页时
             session.setAttribute("baby",baby);//echart绘制所需
         }
-        else if(id==0) {
-            baby = (Baby)session.getAttribute("baby");
+        else if(index==-1) {//已经登录，其他页面跳转过来，baby和index都不变
+            baby = (Baby)session.getAttribute("baby");//获取会话中的baby
+            index = (Integer) session.getAttribute("index");//获取会话的index
         }
-        else {
-            baby = babyService.selectBabyById(id);//返回选中的baby
-            session.setAttribute("bid",id);
-//            System.out.println("----------------------------------"+id);
+        else {//首页切换baby时
+            baby = blist.get(index);//返回下拉框选中的baby
+            session.setAttribute("index",index);//将下拉框索引记录到会话中
 //            System.out.println("----------------------------------"+baby.getName());
             session.setAttribute("baby",baby);//echart绘制所需
         }
@@ -86,6 +89,7 @@ public class BlogController {
         //List<Blog> list = blogService.selectAllFirst();
         List<Blog> list = blogService.selectOldBlog("04","15",year);//测试那年今天的历史数据
 
+        model.addAttribute("index",index);
         model.addAttribute("baby",baby);
 
       //  session.setAttribute("blist",blist);
