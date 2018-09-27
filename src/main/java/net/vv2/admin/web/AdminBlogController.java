@@ -1,5 +1,6 @@
 package net.vv2.admin.web;
 
+import com.xiaoleilu.hutool.date.DateUtil;
 import net.vv2.Utils.PageHelp;
 import net.vv2.baby.domain.Baby;
 import net.vv2.baby.domain.Blog;
@@ -82,6 +83,7 @@ public class AdminBlogController {
      * @param blog
      * @param baby_id
      * @param user_id
+     * @param date
      * @param mv
      * @return
      */
@@ -94,6 +96,7 @@ public class AdminBlogController {
             String blog,
             Integer baby_id,
             Integer user_id,
+            String date,
             ModelAndView mv
     ){
 
@@ -105,7 +108,12 @@ public class AdminBlogController {
         blog1.setLanguage(language);
         blog1.setCognitive(cognitive);
         blog1.setBlog(blog);
-        blog1.setUpdate_time(new Date());
+        if(date==""||date==null) {
+            blog1.setUpdate_time(new Date());
+        }
+        else{
+            blog1.setUpdate_time(DateUtil.parse(date));
+        }
         blog1.setBaby(baby);
         blog1.setUser(user);
         System.out.println(blog1);

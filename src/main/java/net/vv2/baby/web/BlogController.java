@@ -155,6 +155,7 @@ public class BlogController {
      * @param cognitive
      * @param blog
      * @param baby_id
+     * @param date
      * @param session
      * @param mv
      * @return
@@ -165,13 +166,21 @@ public class BlogController {
                                  String cognitive,
                                  String blog,
                                  Integer baby_id,
+                                 String date,
                                  HttpSession session,
                                  ModelAndView mv){
         System.out.println("准备添加记录-----------");
         User user = (User) session.getAttribute("user");//获取当前登陆的家长
         Baby baby = babyService.selectBabyById(baby_id);//创建需要记录的baby
-        Date nowtime = new Date();//创建当前时间
-        Blog blog1 = new Blog(first,language,cognitive,blog,nowtime,nowtime,baby,user);//创建日记实体
+        Blog blog1 = new Blog();
+        if(date==""||date==null){
+            Date nowtime = new Date();//创建当前时间
+            blog1 = new Blog(first,language,cognitive,blog,nowtime,nowtime,baby,user);//创建日记实体
+        }
+        else{
+            blog1 = new Blog(first,language,cognitive,blog,DateUtil.parse(date),DateUtil.parse(date),baby,user);//创建日记实体
+        }
+
         System.out.println(blog1.toString());
         //保存数据，判断或失败，并进行相关的跳转
         if (blogService.addBlog(blog1)>0){
@@ -197,6 +206,7 @@ public class BlogController {
      * @param height
      * @param weight
      * @param baby_id
+     * @param date
      * @param session
      * @param mv
      * @return int
@@ -205,13 +215,14 @@ public class BlogController {
     public ModelAndView saveHealthy(Integer height,
                                  Float weight,
                                  Integer baby_id,
+                                 String date,
                                  HttpSession session,
                                  ModelAndView mv){
         System.out.println("准备添加身高体重记录-----------");
         User user = (User) session.getAttribute("user");//获取当前登陆的家长
         Baby baby = babyService.selectBabyById(baby_id);//创建需要记录的baby
-        Date nowtime = new Date();//创建当前时间
-        Healthy healthy = new Healthy(height,weight,nowtime,baby);//准备需要添加的身高体重数据
+        //Date nowtime = new Date();//创建当前时间
+        Healthy healthy = new Healthy(height,weight,DateUtil.parse(date),baby);//准备需要添加的身高体重数据
         System.out.println(healthy);
         //保存数据，判断或失败，并进行相关的跳转
         if (healthyService.insertHealthy(healthy)>0){

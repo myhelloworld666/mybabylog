@@ -15,6 +15,22 @@
         var height = document.getElementById("height");//获取身高input对象
         var weight = document.getElementById("weight");//获取体重input对象
         // alert(height.value);
+        if(Number(height.value)<0){
+            alert("身高请输入正数");
+            return false
+        }
+        if(isNaN(height.value)){
+            alert("身高请输入数字");
+            return false
+        }
+        if(Number(weight.value)<0){
+            alert("体重请输入正数");
+            return false
+        }
+        if(isNaN(weight.value)){
+            alert("体重请输入数字");
+            return false
+        }
         if(vaildrequired(height.value,"身高不能为空")==false){
             height.focus();
             return false

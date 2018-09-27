@@ -14,13 +14,34 @@
     function vaildform(){//身高体重表单验证
        var height = document.getElementById("height");//获取身高input对象
         var weight = document.getElementById("weight");//获取体重input对象
-       // alert(height.value);
+        var date = document.getElementById("recdate");//获取记录时间input对象
+       //alert(Number(height.value));
+        if(Number(height.value)<0){
+            alert("身高请输入正数");
+            return false
+        }
+        if(isNaN(height.value)){
+            alert("身高请输入数字");
+            return false
+        }
+        if(Number(weight.value)<0){
+            alert("体重请输入正数");
+            return false
+        }
+        if(isNaN(weight.value)){
+            alert("体重请输入数字");
+            return false
+        }
         if(vaildrequired(height.value,"身高不能为空")==false){
                 height.focus();
                 return false
         }
         if(vaildrequired(weight.value,"体重不能为空")==false){
             weight.focus();
+            return false
+        }
+        if(vaildrequired(date.value,"请选择记录时间")==false){
+            date.focus();
             return false
         }
         //alert("test vaildform");
@@ -75,12 +96,18 @@
                         </div>
                     </div>
 
-
-
                     <div class="am-form-group">
                         <label for="blog" class="am-u-sm-3 am-form-label">日志 / Blog</label>
                         <div class="am-u-sm-9">
                             <textarea class="" rows="5" id="blog" name="blog" placeholder="几十个字符记录那天孩子发生过的事情..."></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label for="dailydate" class="am-u-sm-3 am-form-label">日记时间 / date</label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="am-form-field" id="dailydate" placeholder="请选择写下日记的时间，不选默认当前日期" data-am-datepicker readonly required name="date" />
 
                         </div>
                     </div>
@@ -118,6 +145,14 @@
                         <label for="weight" class="am-u-sm-3 am-form-label">体重 / weight</label>
                         <div class="am-u-sm-9">
                             <input type="text" id="weight" name="weight" placeholder="单位：公斤，最多请保留一位小数。">
+
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label for="recdate" class="am-u-sm-3 am-form-label">记录时间 / date</label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="am-form-field" id="recdate" placeholder="请选择记录的时间" data-am-datepicker readonly required name="date" />
 
                         </div>
                     </div>

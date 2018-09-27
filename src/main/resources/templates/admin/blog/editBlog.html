@@ -60,12 +60,19 @@
                         </div>
                     </div>
 
-
                     <div class="am-form-group">
                         <label for="blog" class="am-u-sm-3 am-form-label">日志 / Blog</label>
                         <div class="am-u-sm-9">
                             <textarea class="" rows="5" id="blog" name="blog" placeholder="几十个字符记录那天孩子发生过的事情..."
                                       th:text="${blog.blog}"></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label for="dailydate" class="am-u-sm-3 am-form-label">日记时间 / date</label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="am-form-field" id="dailydate" placeholder="修改写下日记的时间，不选则不修改" data-am-datepicker readonly required name="date" />
 
                         </div>
                     </div>
