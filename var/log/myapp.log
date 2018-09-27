@@ -289,3 +289,558 @@
 2018-09-26 16:34:28.664 DEBUG 332 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
 2018-09-26 16:34:28.665 DEBUG 332 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
 2018-09-26 16:34:28.665 DEBUG 332 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 5
+2018-09-26 16:39:03.859  INFO 12996 --- [main] net.vv2.Mybaby2017Application            : Starting Mybaby2017Application on ZJLSLICHAOQUN1A with PID 12996 (C:\Users\Administrator.ZJLSYIDONG1Z\IdeaProjects\mybabylog\target\classes started by lichao9 in C:\Users\Administrator.ZJLSYIDONG1Z\IdeaProjects\mybabylog)
+2018-09-26 16:39:03.861  INFO 12996 --- [main] net.vv2.Mybaby2017Application            : No active profile set, falling back to default profiles: default
+2018-09-26 16:39:03.996  INFO 12996 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35d08e6c: startup date [Wed Sep 26 16:39:03 CST 2018]; root of context hierarchy
+2018-09-26 16:39:04.830  INFO 12996 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-09-26 16:39:04.839  INFO 12996 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-09-26 16:39:04.839  INFO 12996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-09-26 16:39:04.886  INFO 12996 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-26 16:39:04.886  INFO 12996 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 893 ms
+2018-09-26 16:39:04.967  INFO 12996 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-09-26 16:39:04.970  INFO 12996 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-26 16:39:04.970  INFO 12996 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-26 16:39:04.970  INFO 12996 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-26 16:39:04.970  INFO 12996 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-26 16:39:05.292  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35d08e6c: startup date [Wed Sep 26 16:39:03 CST 2018]; root of context hierarchy
+2018-09-26 16:39:05.321  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/babyList]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.babyList(org.springframework.ui.Model)
+2018-09-26 16:39:05.322  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/addBaby]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.addBaby(org.springframework.ui.Model)
+2018-09-26 16:39:05.322  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/saveBaby]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.saveBaby(java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.323  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/editBaby/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.editBaby(java.lang.Integer,org.springframework.ui.Model)
+2018-09-26 16:39:05.323  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/updBaby]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.updBaby(java.lang.Integer,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.323  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/delBaby/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.delBaby(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.324  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/blogList]}" onto public java.lang.String net.vv2.admin.web.AdminBlogController.blogList(java.lang.String,int,int,org.springframework.ui.Model)
+2018-09-26 16:39:05.324  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/editBlog/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminBlogController.editBlog(java.lang.Integer,org.springframework.ui.Model)
+2018-09-26 16:39:05.324  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/updBlog]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBlogController.updBlog(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.325  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/delBlog/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBlogController.delBlog(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.326  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/healthyList]}" onto public java.lang.String net.vv2.admin.web.AdminHealthyController.healthyList(org.springframework.ui.Model)
+2018-09-26 16:39:05.326  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/editHealthy/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminHealthyController.editHealthy(java.lang.Integer,org.springframework.ui.Model)
+2018-09-26 16:39:05.326  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/updHealthy]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminHealthyController.updHealthy(java.lang.Integer,java.lang.Integer,java.lang.Float,java.lang.String,java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.326  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/delHealthy/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminHealthyController.delHealthy(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.327  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/home]}" onto public java.lang.String net.vv2.admin.web.AdminHomeController.index()
+2018-09-26 16:39:05.329  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/userList]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.userList(org.springframework.ui.Model)
+2018-09-26 16:39:05.329  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/addUser]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.userAdd()
+2018-09-26 16:39:05.329  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/saveUser]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.saveAdd(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.330  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/editUser/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.editUser(java.lang.Integer,org.springframework.ui.Model)
+2018-09-26 16:39:05.330  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/updUser]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.updUser(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.330  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/delUser/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.delUser(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.330  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/app/HealthyRestJson]}" onto public java.util.HashMap<java.lang.String, java.util.ArrayList<java.lang.String>> net.vv2.baby.web.App.HealthyRestJson.getHealthyRestJson(javax.servlet.http.HttpSession)
+2018-09-26 16:39:05.331  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/home/{index}]}" onto public java.lang.String net.vv2.baby.web.BlogController.index(java.lang.Integer,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2018-09-26 16:39:05.331  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/blog]}" onto public java.lang.String net.vv2.baby.web.BlogController.blogList(java.lang.String,int,int,org.springframework.ui.Model)
+2018-09-26 16:39:05.332  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/add]}" onto public java.lang.String net.vv2.baby.web.BlogController.addFrom(org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2018-09-26 16:39:05.332  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/saveBlog]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.BlogController.saveBlog(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.334  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/saveHealthy]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.BlogController.saveHealthy(java.lang.Integer,java.lang.Float,java.lang.Integer,javax.servlet.http.HttpSession,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.334  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/firstList]}" onto public java.lang.String net.vv2.baby.web.BlogController.firstList(org.springframework.ui.Model)
+2018-09-26 16:39:05.334  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/languageList]}" onto public java.lang.String net.vv2.baby.web.BlogController.languageList(org.springframework.ui.Model)
+2018-09-26 16:39:05.334  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/cognitiveList]}" onto public java.lang.String net.vv2.baby.web.BlogController.cognitiveList(org.springframework.ui.Model)
+2018-09-26 16:39:05.335  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String net.vv2.baby.web.LoginController.login()
+2018-09-26 16:39:05.335  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loginfrom]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.LoginController.LoginFrom(java.lang.String,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:39:05.335  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout]}" onto public java.lang.String net.vv2.baby.web.LoginController.logout(org.springframework.web.bind.support.SessionStatus,org.springframework.ui.Model)
+2018-09-26 16:39:05.336  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-26 16:39:05.337  INFO 12996 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-26 16:39:05.351  INFO 12996 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-26 16:39:05.351  INFO 12996 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-26 16:39:05.371  INFO 12996 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-26 16:39:05.622  INFO 12996 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-26 16:39:05.655  INFO 12996 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-09-26 16:39:05.659  INFO 12996 --- [main] net.vv2.Mybaby2017Application            : Started Mybaby2017Application in 1.986 seconds (JVM running for 2.459)
+2018-09-26 16:39:10.598  INFO 12996 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-26 16:39:10.599  INFO 12996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-26 16:39:10.611  INFO 12996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2018-09-26 16:39:12.697 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.m.U.selectUserByNameAndPassword    : ==>  Preparing: select * from bb_user where name = ? and password = ? 
+2018-09-26 16:39:12.708 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.m.U.selectUserByNameAndPassword    : ==> Parameters: admin(String), 21232f297a57a5a743894a0e4a801fc3(String)
+2018-09-26 16:39:12.714 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.m.U.selectUserByNameAndPassword    : <==      Total: 1
+2018-09-26 16:39:13.750 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:39:13.752 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:39:13.757 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:39:13.759 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:39:13.760 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 1(Integer)
+2018-09-26 16:39:13.762 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:39:13.764 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:39:13.765 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 1(Integer)
+2018-09-26 16:39:13.767 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:39:13.792 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:39:13.793 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:39:13.796 DEBUG 12996 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:39:13.924 DEBUG 12996 --- [http-nio-8080-exec-6] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:39:13.925 DEBUG 12996 --- [http-nio-8080-exec-6] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 1(Integer)
+2018-09-26 16:39:13.927 DEBUG 12996 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:39:13.928 DEBUG 12996 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-26 16:39:13.928 DEBUG 12996 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:39:13.930 DEBUG 12996 --- [http-nio-8080-exec-6] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 2
+2018-09-26 16:39:16.343 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:39:16.346 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:39:16.351 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:39:16.354 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:39:16.355 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:39:16.357 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:39:16.358 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:39:16.360 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:39:16.361 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:39:16.363 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:39:16.365 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:39:16.368 DEBUG 12996 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:39:16.459 DEBUG 12996 --- [http-nio-8080-exec-7] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:39:16.459 DEBUG 12996 --- [http-nio-8080-exec-7] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 2(Integer)
+2018-09-26 16:39:16.460 DEBUG 12996 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:39:16.461 DEBUG 12996 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:39:16.462 DEBUG 12996 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:39:16.462 DEBUG 12996 --- [http-nio-8080-exec-7] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 5
+2018-09-26 16:39:18.825 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:39:18.826 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:39:18.829 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:39:18.831 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:39:18.832 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 4(Integer)
+2018-09-26 16:39:18.836 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:39:18.838 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:39:18.839 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 4(Integer)
+2018-09-26 16:39:18.841 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:39:18.842 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:39:18.842 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:39:18.843 DEBUG 12996 --- [http-nio-8080-exec-4] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:39:18.921 DEBUG 12996 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:39:18.921 DEBUG 12996 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 4(Integer)
+2018-09-26 16:39:18.922 DEBUG 12996 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:39:18.923 DEBUG 12996 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 4(Integer)
+2018-09-26 16:39:18.924 DEBUG 12996 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:39:18.925 DEBUG 12996 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 2
+2018-09-26 16:39:31.654 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectKeyCount   : ==>  Preparing: select count(*) from bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') 
+2018-09-26 16:39:31.656 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectKeyCount   : ==> Parameters: (String), (String), (String), (String)
+2018-09-26 16:39:31.657 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectKeyCount   : <==      Total: 1
+2018-09-26 16:39:31.659 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectPageBlog   : ==>  Preparing: SELECT * FROM bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') ORDER BY create_time DESC LIMIT ?,? 
+2018-09-26 16:39:31.660 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectPageBlog   : ==> Parameters: (String), (String), (String), (String), 0(Integer), 20(Integer)
+2018-09-26 16:39:31.665 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:39:31.666 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 3(Integer)
+2018-09-26 16:39:31.668 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:39:31.668 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:39:31.669 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 2(Integer)
+2018-09-26 16:39:31.671 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:39:31.674 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:39:31.674 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:39:31.678 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:39:31.678 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:39:31.678 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 1(Integer)
+2018-09-26 16:39:31.679 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:39:31.681 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:39:31.681 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-26 16:39:31.682 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:39:31.683 DEBUG 12996 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectPageBlog   : <==      Total: 7
+2018-09-26 16:39:34.518 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:39:34.519 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:39:34.524 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:39:34.525 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:39:34.526 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 4(Integer)
+2018-09-26 16:39:34.528 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:39:34.528 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:39:34.529 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 4(Integer)
+2018-09-26 16:39:34.530 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:39:34.531 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:39:34.531 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:39:34.532 DEBUG 12996 --- [http-nio-8080-exec-10] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:39:34.607 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:39:34.607 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 4(Integer)
+2018-09-26 16:39:34.608 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:39:34.608 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 4(Integer)
+2018-09-26 16:39:34.609 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:39:34.610 DEBUG 12996 --- [http-nio-8080-exec-1] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 2
+2018-09-26 16:51:48.593  INFO 2980 --- [main] net.vv2.Mybaby2017Application            : Starting Mybaby2017Application on ZJLSLICHAOQUN1A with PID 2980 (C:\Users\Administrator.ZJLSYIDONG1Z\IdeaProjects\mybabylog\target\classes started by lichao9 in C:\Users\Administrator.ZJLSYIDONG1Z\IdeaProjects\mybabylog)
+2018-09-26 16:51:48.595  INFO 2980 --- [main] net.vv2.Mybaby2017Application            : No active profile set, falling back to default profiles: default
+2018-09-26 16:51:48.765  INFO 2980 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3016fd5e: startup date [Wed Sep 26 16:51:48 CST 2018]; root of context hierarchy
+2018-09-26 16:51:49.547  INFO 2980 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-09-26 16:51:49.556  INFO 2980 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-09-26 16:51:49.557  INFO 2980 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-09-26 16:51:49.603  INFO 2980 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-26 16:51:49.603  INFO 2980 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 845 ms
+2018-09-26 16:51:49.693  INFO 2980 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-09-26 16:51:49.695  INFO 2980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-26 16:51:49.696  INFO 2980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-26 16:51:49.696  INFO 2980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-26 16:51:49.696  INFO 2980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-26 16:51:50.040  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3016fd5e: startup date [Wed Sep 26 16:51:48 CST 2018]; root of context hierarchy
+2018-09-26 16:51:50.069  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/delBaby/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.delBaby(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.069  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/babyList]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.babyList(org.springframework.ui.Model)
+2018-09-26 16:51:50.070  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/addBaby]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.addBaby(org.springframework.ui.Model)
+2018-09-26 16:51:50.070  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/saveBaby]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.saveBaby(java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.070  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/editBaby/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.editBaby(java.lang.Integer,org.springframework.ui.Model)
+2018-09-26 16:51:50.070  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/updBaby]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.updBaby(java.lang.Integer,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.071  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/blogList]}" onto public java.lang.String net.vv2.admin.web.AdminBlogController.blogList(java.lang.String,int,int,org.springframework.ui.Model)
+2018-09-26 16:51:50.072  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/delBlog/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBlogController.delBlog(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.072  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/editBlog/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminBlogController.editBlog(java.lang.Integer,org.springframework.ui.Model)
+2018-09-26 16:51:50.072  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/updBlog]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBlogController.updBlog(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.073  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/healthyList]}" onto public java.lang.String net.vv2.admin.web.AdminHealthyController.healthyList(org.springframework.ui.Model)
+2018-09-26 16:51:50.073  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/editHealthy/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminHealthyController.editHealthy(java.lang.Integer,org.springframework.ui.Model)
+2018-09-26 16:51:50.074  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/updHealthy]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminHealthyController.updHealthy(java.lang.Integer,java.lang.Integer,java.lang.Float,java.lang.String,java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.074  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/delHealthy/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminHealthyController.delHealthy(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.074  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/home]}" onto public java.lang.String net.vv2.admin.web.AdminHomeController.index()
+2018-09-26 16:51:50.076  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/userList]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.userList(org.springframework.ui.Model)
+2018-09-26 16:51:50.077  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/addUser]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.userAdd()
+2018-09-26 16:51:50.077  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/saveUser]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.saveAdd(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.077  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/editUser/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.editUser(java.lang.Integer,org.springframework.ui.Model)
+2018-09-26 16:51:50.077  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/updUser]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.updUser(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.078  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/delUser/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.delUser(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.078  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/app/HealthyRestJson]}" onto public java.util.HashMap<java.lang.String, java.util.ArrayList<java.lang.String>> net.vv2.baby.web.App.HealthyRestJson.getHealthyRestJson(javax.servlet.http.HttpSession)
+2018-09-26 16:51:50.079  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/home/{index}]}" onto public java.lang.String net.vv2.baby.web.BlogController.index(java.lang.Integer,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2018-09-26 16:51:50.080  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/blog]}" onto public java.lang.String net.vv2.baby.web.BlogController.blogList(java.lang.String,int,int,org.springframework.ui.Model)
+2018-09-26 16:51:50.080  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/add]}" onto public java.lang.String net.vv2.baby.web.BlogController.addFrom(org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2018-09-26 16:51:50.080  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/saveBlog]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.BlogController.saveBlog(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.080  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/saveHealthy]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.BlogController.saveHealthy(java.lang.Integer,java.lang.Float,java.lang.Integer,javax.servlet.http.HttpSession,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.081  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/firstList]}" onto public java.lang.String net.vv2.baby.web.BlogController.firstList(org.springframework.ui.Model)
+2018-09-26 16:51:50.081  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/languageList]}" onto public java.lang.String net.vv2.baby.web.BlogController.languageList(org.springframework.ui.Model)
+2018-09-26 16:51:50.081  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/cognitiveList]}" onto public java.lang.String net.vv2.baby.web.BlogController.cognitiveList(org.springframework.ui.Model)
+2018-09-26 16:51:50.082  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String net.vv2.baby.web.LoginController.login()
+2018-09-26 16:51:50.082  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loginfrom]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.LoginController.LoginFrom(java.lang.String,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-26 16:51:50.082  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout]}" onto public java.lang.String net.vv2.baby.web.LoginController.logout(org.springframework.web.bind.support.SessionStatus,org.springframework.ui.Model)
+2018-09-26 16:51:50.083  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-26 16:51:50.083  INFO 2980 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-26 16:51:50.097  INFO 2980 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-26 16:51:50.097  INFO 2980 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-26 16:51:50.117  INFO 2980 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-26 16:51:50.395  INFO 2980 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-26 16:51:50.429  INFO 2980 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-09-26 16:51:50.432  INFO 2980 --- [main] net.vv2.Mybaby2017Application            : Started Mybaby2017Application in 2.055 seconds (JVM running for 2.648)
+2018-09-26 16:52:02.554  INFO 2980 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-26 16:52:02.554  INFO 2980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-26 16:52:02.568  INFO 2980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-09-26 16:52:07.333 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.m.U.selectUserByNameAndPassword    : ==>  Preparing: select * from bb_user where name = ? and password = ? 
+2018-09-26 16:52:07.345 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.m.U.selectUserByNameAndPassword    : ==> Parameters: admin(String), 21232f297a57a5a743894a0e4a801fc3(String)
+2018-09-26 16:52:07.353 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.m.U.selectUserByNameAndPassword    : <==      Total: 1
+2018-09-26 16:52:08.368 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:52:08.368 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:52:08.370 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:52:08.371 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:52:08.371 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 1(Integer)
+2018-09-26 16:52:08.372 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:08.373 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:52:08.373 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 1(Integer)
+2018-09-26 16:52:08.374 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:08.388 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:52:08.388 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:52:08.390 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:52:08.498 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:52:08.498 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 1(Integer)
+2018-09-26 16:52:08.500 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:08.500 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-26 16:52:08.501 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:08.502 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 2
+2018-09-26 16:52:25.111 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:52:25.114 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:52:25.118 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:52:25.121 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:52:25.122 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:52:25.123 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:25.125 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:52:25.126 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:52:25.127 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:25.129 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:52:25.129 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:52:25.131 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:52:25.224 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:52:25.225 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 2(Integer)
+2018-09-26 16:52:25.226 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:25.227 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:52:25.228 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:25.229 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 5
+2018-09-26 16:52:28.225 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:52:28.226 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:52:28.229 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:52:28.231 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:52:28.231 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 4(Integer)
+2018-09-26 16:52:28.233 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:28.235 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:52:28.237 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 4(Integer)
+2018-09-26 16:52:28.240 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:28.241 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:52:28.242 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:52:28.243 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:52:28.343 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:52:28.343 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 4(Integer)
+2018-09-26 16:52:28.344 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:28.345 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 4(Integer)
+2018-09-26 16:52:28.346 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:28.347 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 2
+2018-09-26 16:52:30.678 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectKeyCount   : ==>  Preparing: select count(*) from bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') 
+2018-09-26 16:52:30.680 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectKeyCount   : ==> Parameters: (String), (String), (String), (String)
+2018-09-26 16:52:30.682 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectKeyCount   : <==      Total: 1
+2018-09-26 16:52:30.684 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectPageBlog   : ==>  Preparing: SELECT * FROM bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') ORDER BY create_time DESC LIMIT ?,? 
+2018-09-26 16:52:30.685 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectPageBlog   : ==> Parameters: (String), (String), (String), (String), 0(Integer), 20(Integer)
+2018-09-26 16:52:30.689 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:30.690 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 3(Integer)
+2018-09-26 16:52:30.691 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:30.691 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:52:30.692 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 2(Integer)
+2018-09-26 16:52:30.693 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:52:30.694 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:30.694 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:52:30.696 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:30.697 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:52:30.697 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 1(Integer)
+2018-09-26 16:52:30.699 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:52:30.700 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:30.701 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-26 16:52:30.702 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:30.703 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BlogMapper.selectPageBlog   : <==      Total: 7
+2018-09-26 16:52:31.829 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:52:31.829 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:52:31.833 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:52:31.834 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:52:31.835 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 4(Integer)
+2018-09-26 16:52:31.836 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:31.836 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:52:31.837 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 4(Integer)
+2018-09-26 16:52:31.838 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:31.839 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:52:31.840 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:52:31.841 DEBUG 2980 --- [http-nio-8080-exec-10] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:52:31.920 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:52:31.921 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 4(Integer)
+2018-09-26 16:52:31.922 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:31.922 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 4(Integer)
+2018-09-26 16:52:31.924 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:31.924 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 2
+2018-09-26 16:52:34.790 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:52:34.791 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:52:34.795 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:52:34.796 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:52:34.796 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:52:34.798 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:34.799 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:52:34.799 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:52:34.800 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:34.801 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:52:34.801 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:52:34.803 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:52:34.889 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:52:34.890 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 2(Integer)
+2018-09-26 16:52:34.891 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:34.891 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:52:34.892 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:34.895 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 5
+2018-09-26 16:52:35.709 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectKeyCount   : ==>  Preparing: select count(*) from bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') 
+2018-09-26 16:52:35.713 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectKeyCount   : ==> Parameters: (String), (String), (String), (String)
+2018-09-26 16:52:35.718 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectKeyCount   : <==      Total: 1
+2018-09-26 16:52:35.719 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectPageBlog   : ==>  Preparing: SELECT * FROM bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') ORDER BY create_time DESC LIMIT ?,? 
+2018-09-26 16:52:35.721 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectPageBlog   : ==> Parameters: (String), (String), (String), (String), 0(Integer), 20(Integer)
+2018-09-26 16:52:35.726 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:35.727 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 3(Integer)
+2018-09-26 16:52:35.729 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:35.729 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:52:35.729 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 2(Integer)
+2018-09-26 16:52:35.730 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:52:35.730 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:35.731 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:52:35.731 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:35.731 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:52:35.732 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 1(Integer)
+2018-09-26 16:52:35.732 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:52:35.733 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:35.734 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-26 16:52:35.734 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:35.736 DEBUG 2980 --- [http-nio-8080-exec-2] n.v.b.mapper.BlogMapper.selectPageBlog   : <==      Total: 7
+2018-09-26 16:52:36.542 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:52:36.543 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:52:36.545 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:52:36.546 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:52:36.546 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:52:36.547 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:36.548 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:52:36.548 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:52:36.549 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:52:36.550 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:52:36.551 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:52:36.552 DEBUG 2980 --- [http-nio-8080-exec-5] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:52:36.631 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:52:36.632 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 2(Integer)
+2018-09-26 16:52:36.632 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:52:36.633 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:52:36.634 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:52:36.634 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 5
+2018-09-26 16:52:43.945 DEBUG 2980 --- [http-nio-8080-exec-8] n.vv2.baby.mapper.UserMapper.selectAll   : ==>  Preparing: select * from bb_user 
+2018-09-26 16:52:43.946 DEBUG 2980 --- [http-nio-8080-exec-8] n.vv2.baby.mapper.UserMapper.selectAll   : ==> Parameters: 
+2018-09-26 16:52:43.948 DEBUG 2980 --- [http-nio-8080-exec-8] n.vv2.baby.mapper.UserMapper.selectAll   : <==      Total: 3
+2018-09-26 16:52:52.904 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : ==>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:52:52.905 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : ==> Parameters: 1(Integer)
+2018-09-26 16:52:52.907 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.UserMapper.selectUserById   : <==      Total: 1
+2018-09-26 16:53:05.441 DEBUG 2980 --- [http-nio-8080-exec-5] n.vv2.baby.mapper.UserMapper.selectAll   : ==>  Preparing: select * from bb_user 
+2018-09-26 16:53:05.442 DEBUG 2980 --- [http-nio-8080-exec-5] n.vv2.baby.mapper.UserMapper.selectAll   : ==> Parameters: 
+2018-09-26 16:53:05.444 DEBUG 2980 --- [http-nio-8080-exec-5] n.vv2.baby.mapper.UserMapper.selectAll   : <==      Total: 3
+2018-09-26 16:53:08.472 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectAllBaby    : ==>  Preparing: select * from bb_baby 
+2018-09-26 16:53:08.473 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectAllBaby    : ==> Parameters: 
+2018-09-26 16:53:08.477 DEBUG 2980 --- [http-nio-8080-exec-3] n.v.b.mapper.BabyMapper.selectAllBaby    : <==      Total: 5
+2018-09-26 16:53:13.743 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyById   : ==>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:13.744 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyById   : ==> Parameters: 1(Integer)
+2018-09-26 16:53:13.746 DEBUG 2980 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyById   : <==      Total: 1
+2018-09-26 16:53:13.747 DEBUG 2980 --- [http-nio-8080-exec-6] n.vv2.baby.mapper.UserMapper.selectAll   : ==>  Preparing: select * from bb_user 
+2018-09-26 16:53:13.747 DEBUG 2980 --- [http-nio-8080-exec-6] n.vv2.baby.mapper.UserMapper.selectAll   : ==> Parameters: 
+2018-09-26 16:53:13.749 DEBUG 2980 --- [http-nio-8080-exec-6] n.vv2.baby.mapper.UserMapper.selectAll   : <==      Total: 3
+2018-09-26 16:53:21.139 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectKeyCount   : ==>  Preparing: select count(*) from bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') 
+2018-09-26 16:53:21.141 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectKeyCount   : ==> Parameters: (String), (String), (String), (String)
+2018-09-26 16:53:21.142 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectKeyCount   : <==      Total: 1
+2018-09-26 16:53:21.143 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectPageBlog   : ==>  Preparing: SELECT * FROM bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') ORDER BY create_time DESC LIMIT ?,? 
+2018-09-26 16:53:21.144 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectPageBlog   : ==> Parameters: (String), (String), (String), (String), 0(Integer), 20(Integer)
+2018-09-26 16:53:21.147 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:21.147 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 3(Integer)
+2018-09-26 16:53:21.149 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:21.149 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:53:21.149 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 2(Integer)
+2018-09-26 16:53:21.152 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:53:21.155 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:21.155 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:53:21.157 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:21.157 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:53:21.157 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 1(Integer)
+2018-09-26 16:53:21.158 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:53:21.159 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:21.159 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-26 16:53:21.160 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:21.161 DEBUG 2980 --- [http-nio-8080-exec-8] n.v.b.mapper.BlogMapper.selectPageBlog   : <==      Total: 7
+2018-09-26 16:53:22.478 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.baby.mapper.HealthyMapper.selectAll  : ==>  Preparing: select * from bb_healthy 
+2018-09-26 16:53:22.479 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.baby.mapper.HealthyMapper.selectAll  : ==> Parameters: 
+2018-09-26 16:53:22.481 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:22.482 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:53:22.484 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:22.485 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:22.488 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-26 16:53:22.490 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:22.492 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:22.492 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 4(Integer)
+2018-09-26 16:53:22.494 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:22.494 DEBUG 2980 --- [http-nio-8080-exec-9] n.v.baby.mapper.HealthyMapper.selectAll  : <==      Total: 9
+2018-09-26 16:53:24.865 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BlogMapper.selectKeyCount   : ==>  Preparing: select count(*) from bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') 
+2018-09-26 16:53:24.866 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BlogMapper.selectKeyCount   : ==> Parameters: (String), (String), (String), (String)
+2018-09-26 16:53:24.869 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BlogMapper.selectKeyCount   : <==      Total: 1
+2018-09-26 16:53:24.870 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BlogMapper.selectPageBlog   : ==>  Preparing: SELECT * FROM bb_blog WHERE first like CONCAT('%',?,'%') OR language like CONCAT('%',?,'%') or cognitive like CONCAT('%',?,'%') or blog like CONCAT('%',?,'%') ORDER BY create_time DESC LIMIT ?,? 
+2018-09-26 16:53:24.870 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BlogMapper.selectPageBlog   : ==> Parameters: (String), (String), (String), (String), 0(Integer), 20(Integer)
+2018-09-26 16:53:24.872 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:24.873 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 3(Integer)
+2018-09-26 16:53:24.874 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:24.875 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:53:24.875 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 2(Integer)
+2018-09-26 16:53:24.877 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:53:24.878 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:24.878 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:53:24.880 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:24.880 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.UserMapper.selectUserById   : ====>  Preparing: select * from bb_user where id = ? 
+2018-09-26 16:53:24.881 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.UserMapper.selectUserById   : ====> Parameters: 1(Integer)
+2018-09-26 16:53:24.882 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.UserMapper.selectUserById   : <====      Total: 1
+2018-09-26 16:53:24.883 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:24.883 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-26 16:53:24.885 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:24.887 DEBUG 2980 --- [http-nio-8080-exec-1] n.v.b.mapper.BlogMapper.selectPageBlog   : <==      Total: 7
+2018-09-26 16:53:47.656 DEBUG 2980 --- [http-nio-8080-exec-10] n.vv2.baby.mapper.UserMapper.selectAll   : ==>  Preparing: select * from bb_user 
+2018-09-26 16:53:47.657 DEBUG 2980 --- [http-nio-8080-exec-10] n.vv2.baby.mapper.UserMapper.selectAll   : ==> Parameters: 
+2018-09-26 16:53:47.659 DEBUG 2980 --- [http-nio-8080-exec-10] n.vv2.baby.mapper.UserMapper.selectAll   : <==      Total: 3
+2018-09-26 16:53:48.614 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-26 16:53:48.615 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-26 16:53:48.618 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-26 16:53:48.618 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-26 16:53:48.619 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:53:48.621 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-26 16:53:48.622 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-26 16:53:48.623 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-26 16:53:48.624 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-26 16:53:48.625 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-26 16:53:48.626 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-26 16:53:48.627 DEBUG 2980 --- [http-nio-8080-exec-7] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-26 16:53:48.721 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-26 16:53:48.721 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 2(Integer)
+2018-09-26 16:53:48.722 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-26 16:53:48.723 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-26 16:53:48.723 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-26 16:53:48.724 DEBUG 2980 --- [http-nio-8080-exec-4] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 5
+2018-09-27 09:27:17.895  INFO 8272 --- [main] net.vv2.Mybaby2017Application            : Starting Mybaby2017Application on ZJLSLICHAOQUN1A with PID 8272 (C:\Users\Administrator.ZJLSYIDONG1Z\IdeaProjects\mybabylog\target\classes started by lichao9 in C:\Users\Administrator.ZJLSYIDONG1Z\IdeaProjects\mybabylog)
+2018-09-27 09:27:17.897  INFO 8272 --- [main] net.vv2.Mybaby2017Application            : No active profile set, falling back to default profiles: default
+2018-09-27 09:27:18.038  INFO 8272 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35d08e6c: startup date [Thu Sep 27 09:27:18 CST 2018]; root of context hierarchy
+2018-09-27 09:27:18.905  INFO 8272 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-09-27 09:27:18.917  INFO 8272 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-09-27 09:27:18.919  INFO 8272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-09-27 09:27:18.978  INFO 8272 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-27 09:27:18.979  INFO 8272 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 945 ms
+2018-09-27 09:27:19.063  INFO 8272 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-09-27 09:27:19.067  INFO 8272 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-27 09:27:19.068  INFO 8272 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-27 09:27:19.068  INFO 8272 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-27 09:27:19.068  INFO 8272 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-27 09:27:19.438  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35d08e6c: startup date [Thu Sep 27 09:27:18 CST 2018]; root of context hierarchy
+2018-09-27 09:27:19.486  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/babyList]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.babyList(org.springframework.ui.Model)
+2018-09-27 09:27:19.487  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/addBaby]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.addBaby(org.springframework.ui.Model)
+2018-09-27 09:27:19.487  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/saveBaby]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.saveBaby(java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.488  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/editBaby/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminBabyController.editBaby(java.lang.Integer,org.springframework.ui.Model)
+2018-09-27 09:27:19.488  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/updBaby]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.updBaby(java.lang.Integer,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.488  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/baby/delBaby/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBabyController.delBaby(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.489  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/blogList]}" onto public java.lang.String net.vv2.admin.web.AdminBlogController.blogList(java.lang.String,int,int,org.springframework.ui.Model)
+2018-09-27 09:27:19.489  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/editBlog/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminBlogController.editBlog(java.lang.Integer,org.springframework.ui.Model)
+2018-09-27 09:27:19.489  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/updBlog]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBlogController.updBlog(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.489  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blog/delBlog/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminBlogController.delBlog(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.490  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/healthyList]}" onto public java.lang.String net.vv2.admin.web.AdminHealthyController.healthyList(org.springframework.ui.Model)
+2018-09-27 09:27:19.491  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/editHealthy/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminHealthyController.editHealthy(java.lang.Integer,org.springframework.ui.Model)
+2018-09-27 09:27:19.491  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/updHealthy]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminHealthyController.updHealthy(java.lang.Integer,java.lang.Integer,java.lang.Float,java.lang.String,java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.492  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/healthy/delHealthy/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminHealthyController.delHealthy(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.492  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/home]}" onto public java.lang.String net.vv2.admin.web.AdminHomeController.index()
+2018-09-27 09:27:19.494  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/userList]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.userList(org.springframework.ui.Model)
+2018-09-27 09:27:19.495  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/addUser]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.userAdd()
+2018-09-27 09:27:19.495  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/saveUser]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.saveAdd(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.495  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/editUser/{id}]}" onto public java.lang.String net.vv2.admin.web.AdminUserController.editUser(java.lang.Integer,org.springframework.ui.Model)
+2018-09-27 09:27:19.496  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/updUser]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.updUser(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.496  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/user/delUser/{id}]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.admin.web.AdminUserController.delUser(java.lang.Integer,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.496  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/app/HealthyRestJson]}" onto public java.util.HashMap<java.lang.String, java.util.ArrayList<java.lang.String>> net.vv2.baby.web.App.HealthyRestJson.getHealthyRestJson(javax.servlet.http.HttpSession)
+2018-09-27 09:27:19.497  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/home/{index}]}" onto public java.lang.String net.vv2.baby.web.BlogController.index(java.lang.Integer,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2018-09-27 09:27:19.497  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/blog]}" onto public java.lang.String net.vv2.baby.web.BlogController.blogList(java.lang.String,int,int,org.springframework.ui.Model)
+2018-09-27 09:27:19.497  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/add]}" onto public java.lang.String net.vv2.baby.web.BlogController.addFrom(org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2018-09-27 09:27:19.498  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/saveBlog]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.BlogController.saveBlog(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.498  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/saveHealthy]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.BlogController.saveHealthy(java.lang.Integer,java.lang.Float,java.lang.Integer,javax.servlet.http.HttpSession,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.499  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/firstList]}" onto public java.lang.String net.vv2.baby.web.BlogController.firstList(org.springframework.ui.Model)
+2018-09-27 09:27:19.499  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/languageList]}" onto public java.lang.String net.vv2.baby.web.BlogController.languageList(org.springframework.ui.Model)
+2018-09-27 09:27:19.499  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baby/cognitiveList]}" onto public java.lang.String net.vv2.baby.web.BlogController.cognitiveList(org.springframework.ui.Model)
+2018-09-27 09:27:19.500  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String net.vv2.baby.web.LoginController.login()
+2018-09-27 09:27:19.500  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loginfrom]}" onto public org.springframework.web.servlet.ModelAndView net.vv2.baby.web.LoginController.LoginFrom(java.lang.String,java.lang.String,org.springframework.web.servlet.ModelAndView)
+2018-09-27 09:27:19.500  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout]}" onto public java.lang.String net.vv2.baby.web.LoginController.logout(org.springframework.web.bind.support.SessionStatus,org.springframework.ui.Model)
+2018-09-27 09:27:19.501  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-27 09:27:19.501  INFO 8272 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-27 09:27:19.516  INFO 8272 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-27 09:27:19.517  INFO 8272 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-27 09:27:19.542  INFO 8272 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-27 09:27:19.873  INFO 8272 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-27 09:27:19.910  INFO 8272 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-09-27 09:27:19.913  INFO 8272 --- [main] net.vv2.Mybaby2017Application            : Started Mybaby2017Application in 2.419 seconds (JVM running for 3.075)
+2018-09-27 09:27:28.711  INFO 8272 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-09-27 09:27:28.711  INFO 8272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-27 09:27:28.724  INFO 8272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-09-27 09:27:33.342 DEBUG 8272 --- [http-nio-8080-exec-2] n.v.b.m.U.selectUserByNameAndPassword    : ==>  Preparing: select * from bb_user where name = ? and password = ? 
+2018-09-27 09:27:33.354 DEBUG 8272 --- [http-nio-8080-exec-2] n.v.b.m.U.selectUserByNameAndPassword    : ==> Parameters: admin(String), 21232f297a57a5a743894a0e4a801fc3(String)
+2018-09-27 09:27:33.362 DEBUG 8272 --- [http-nio-8080-exec-2] n.v.b.m.U.selectUserByNameAndPassword    : <==      Total: 1
+2018-09-27 09:27:34.431 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-27 09:27:34.432 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-27 09:27:34.435 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-27 09:27:34.436 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-27 09:27:34.436 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 1(Integer)
+2018-09-27 09:27:34.438 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-27 09:27:34.439 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-27 09:27:34.439 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 1(Integer)
+2018-09-27 09:27:34.445 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-27 09:27:34.467 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-27 09:27:34.467 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-27 09:27:34.469 DEBUG 8272 --- [http-nio-8080-exec-4] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-27 09:27:34.873 DEBUG 8272 --- [http-nio-8080-exec-5] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-27 09:27:34.874 DEBUG 8272 --- [http-nio-8080-exec-5] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 1(Integer)
+2018-09-27 09:27:34.876 DEBUG 8272 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-27 09:27:34.877 DEBUG 8272 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 1(Integer)
+2018-09-27 09:27:34.878 DEBUG 8272 --- [http-nio-8080-exec-5] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-27 09:27:34.880 DEBUG 8272 --- [http-nio-8080-exec-5] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 2
+2018-09-27 09:27:38.953 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==>  Preparing: select * from bb_baby where partent_id = ? 
+2018-09-27 09:27:38.955 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyBypId  : ==> Parameters: 1(Integer)
+2018-09-27 09:27:38.956 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.BabyMapper.selectBabyBypId  : <==      Total: 3
+2018-09-27 09:27:38.959 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.baby.mapper.BlogMapper.selectCount   : ==>  Preparing: select count(*) from bb_blog where baby_id = ? 
+2018-09-27 09:27:38.959 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.baby.mapper.BlogMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-27 09:27:38.960 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.baby.mapper.BlogMapper.selectCount   : <==      Total: 1
+2018-09-27 09:27:38.961 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.HealthyMapper.selectCount   : ==>  Preparing: select count(*) from bb_healthy where baby_id = ? 
+2018-09-27 09:27:38.961 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.HealthyMapper.selectCount   : ==> Parameters: 2(Integer)
+2018-09-27 09:27:38.962 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.HealthyMapper.selectCount   : <==      Total: 1
+2018-09-27 09:27:38.963 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.BlogMapper.selectOldBlog    : ==>  Preparing: SELECT * from bb_blog WHERE month(create_time) = 04 and day(create_time) = 15 and year(create_time) != ? ORDER BY create_time DESC 
+2018-09-27 09:27:38.963 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.BlogMapper.selectOldBlog    : ==> Parameters: 2018(String)
+2018-09-27 09:27:38.964 DEBUG 8272 --- [http-nio-8080-exec-6] n.v.b.mapper.BlogMapper.selectOldBlog    : <==      Total: 0
+2018-09-27 09:27:39.048 DEBUG 8272 --- [http-nio-8080-exec-7] n.v.b.m.HealthyMapper.selectAllByBId     : ==>  Preparing: select * from bb_healthy where baby_id = ? 
+2018-09-27 09:27:39.048 DEBUG 8272 --- [http-nio-8080-exec-7] n.v.b.m.HealthyMapper.selectAllByBId     : ==> Parameters: 2(Integer)
+2018-09-27 09:27:39.049 DEBUG 8272 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyById   : ====>  Preparing: select * from bb_baby where id = ? 
+2018-09-27 09:27:39.049 DEBUG 8272 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyById   : ====> Parameters: 2(Integer)
+2018-09-27 09:27:39.050 DEBUG 8272 --- [http-nio-8080-exec-7] n.v.b.mapper.BabyMapper.selectBabyById   : <====      Total: 1
+2018-09-27 09:27:39.051 DEBUG 8272 --- [http-nio-8080-exec-7] n.v.b.m.HealthyMapper.selectAllByBId     : <==      Total: 5
