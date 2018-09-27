@@ -2,6 +2,30 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="layout/adminLayout :: htmlhead(title='BabyLog Edit Healthy')"></head>
 <body class="am-with-topbar-fixed-top am-scrollable-vertical">
+<script>
+    function vaildrequired(value,alerttxt)
+    {
+
+        if (value==null||value=="")
+        {alert(alerttxt);return false}
+        else {return true}
+
+    }
+    function vaildform(){//身高体重表单验证
+        var height = document.getElementById("height");//获取身高input对象
+        var weight = document.getElementById("weight");//获取体重input对象
+        // alert(height.value);
+        if(vaildrequired(height.value,"身高不能为空")==false){
+            height.focus();
+            return false
+        }
+        if(vaildrequired(weight.value,"体重不能为空")==false){
+            weight.focus();
+            return false
+        }
+        //alert("test vaildform");
+    }
+</script>
 
 <div th:replace="layout/adminLayout :: header"></div>
 
@@ -24,7 +48,7 @@
             <div class="am-g am-g-fixed adduser">
 
 
-                <form class="am-form am-form-horizontal" th:action="@{/admin/healthy/updHealthy}">
+                <form class="am-form am-form-horizontal" th:action="@{/admin/healthy/updHealthy}" onsubmit="return vaildform()">
                     <input type="hidden"  name="id"  th:value="${healthy.id}">
 
 

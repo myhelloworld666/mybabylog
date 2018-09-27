@@ -2,6 +2,40 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="layout/adminLayout :: htmlhead(title='BabyLog Add Baby')"></head>
 <body class="am-with-topbar-fixed-top am-scrollable-vertical">
+<script>
+    function vaildrequired(value,alerttxt)
+    {
+
+        if (value==null||value=="")
+        {alert(alerttxt);return false}
+        else {return true}
+
+    }
+    function vaildform(){//添加宝贝表单验证
+        var babyname = document.getElementById("user-name");//获取宝贝名input对象
+       // var password = document.getElementById("user-password");//获取密码input对象
+        var birthday = document.getElementById("user-brithday");//获取生日input对象
+        //var amliy = document.getElementById("user-amilymembers");//获取家庭职位input对象
+        // alert(height.value);
+        if(vaildrequired(babyname.value,"宝贝名字不能为空")==false){
+            babyname.focus();
+            return false
+        }
+        // if(vaildrequired(password.value,"密码不能为空")==false){
+        //     password.focus();
+        //     return false
+        // }
+        if(vaildrequired(birthday.value,"请选择宝贝生日")==false){
+            birthday.focus();
+            return false
+        }
+        // if(vaildrequired(amliy.value,"家庭职位不能为空")==false){
+        //     amliy.focus();
+        //     return false
+        // }
+        //alert("test vaildform");
+    }
+</script>
 
 <div th:replace="layout/adminLayout :: header"></div>
 
@@ -22,7 +56,7 @@
             <div class="am-g am-g-fixed adduser">
 
 
-                <form class="am-form am-form-horizontal" th:action="@{/admin/baby/saveBaby}">
+                <form class="am-form am-form-horizontal" th:action="@{/admin/baby/saveBaby}" onsubmit="return vaildform()">
 
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-2 am-form-label">BabyName</label>

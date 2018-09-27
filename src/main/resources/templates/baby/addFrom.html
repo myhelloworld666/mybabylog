@@ -11,7 +11,7 @@
             else {return true}
 
     }
-    function vaildform(thisform){//身高体重表单验证
+    function vaildform(){//身高体重表单验证
        var height = document.getElementById("height");//获取身高input对象
         var weight = document.getElementById("weight");//获取体重input对象
        // alert(height.value);
@@ -95,7 +95,7 @@
         </div>
         <div class="am-tab-panel am-fade" id="tab2">
             <div class="addfrom am-g am-g-fixed am-animation-fade">
-                <form class="am-form am-form-horizontal" th:action="@{/baby/saveHealthy}" onsubmit="return vaildform(this)">
+                <form class="am-form am-form-horizontal" th:action="@{/baby/saveHealthy}" onsubmit="return vaildform()">
 
                     <div class="am-form-group ">
                         <label for="baby_id" class="am-u-sm-3 am-form-label">宝贝 / Baby</label>
