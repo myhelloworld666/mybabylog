@@ -62,7 +62,7 @@ public interface HealthyMapper {
      * 用于绘制echart
      * @return list
      */
-    @Select("select * from bb_healthy where baby_id = #{baby_id}")
+    @Select("select * from bb_healthy where baby_id = #{baby_id} order by create_time")
     @Results({
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "height",property = "height"),
