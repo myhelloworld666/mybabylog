@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -38,7 +39,18 @@ public class AdminBabyController {
     @RequestMapping("/babyList")
     public String babyList(Model model){
         List<Baby> list = babyService.selectAllBaby();
+        Baby b = new Baby();
+      // String bap[][] = new String[list.size()][4];
+        //List pname = new ArrayList();
+        for(int i = 0;i < list.size();i++){//遍历获得父母名字
+           // pname.add(UserService.selectUserById(list.get(i).getPartent_id()).getName());
+            b=list.get(i);
+            b.setPartent_name(UserService.selectUserById(list.get(i).getPartent_id()).getName());
+
+        }
+        //model.addAttribute("pname",pname);
         model.addAttribute("list",list);
+
         return "/admin/baby/babyList";
     }
 

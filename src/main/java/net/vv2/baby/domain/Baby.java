@@ -16,6 +16,11 @@ public class Baby {
     private String name;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date brithday;
+    private String partent_name;
+
+
+
+
 
     public Baby(){}
     public Baby(String name, Date brithday) {
@@ -54,6 +59,14 @@ public class Baby {
 
     public void setBrithday(Date brithday) {
         this.brithday = brithday;
+    }
+
+    public String getPartent_name() {
+        return partent_name;
+    }
+
+    public void setPartent_name(String partent_name) {
+        this.partent_name = partent_name;
     }
 
     @Override

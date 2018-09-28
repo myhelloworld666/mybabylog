@@ -2,6 +2,31 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="layout/adminLayout :: htmlhead(title='BabyLog BabyList')"></head>
 <body class="am-with-topbar-fixed-top am-scrollable-vertical">
+<script th:inline="javascript">
+
+    // var tb = document.getElementById("tab");
+    // //alert("test js");
+    // // var rows = tb.rows;
+    // // alert("test js2");
+    // var pn = new Array();
+    // //alert("test js3");
+    // pn = [[${pname}]];
+    // var t1=tb.rows[1].cell[3];
+    // //var t2=tb.rows[1].cell[4];
+    //
+    // alert(pn[1]);
+    // // alert(tb.rows.length);
+    // alert(t1.text);
+    //alert(t2.text);
+    // t1.innerHTML="ssss";
+    // t2.innerHTML="ssss";
+    // var tr = document.getElementById("partentname");
+    // tr.innerHTML(pn[1]);
+    // alert(pn[1]);
+    // for(var i = 0;i<pn.length;i++){
+    //     tb.rowIndex[i+1].cellIndex[3]=pn[i];
+    // }
+</script>
 
 <div th:replace="layout/adminLayout :: header"></div>
 
@@ -20,22 +45,22 @@
 
             <div class="am-g">
                 <div class="am-u-sm-12">
-                    <table class="am-table am-table-bd am-table-striped admin-content-table">
+                    <table class="am-table am-table-bd am-table-striped admin-content-table" id="tab">
                         <thead>
                         <tr>
                             <th>ID</th>
                             <th>name</th>
                             <th>生日</th>
-                            <th>父母ID</th>
+                            <th>所属用户</th>
                             <th>编辑删除</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr th:each="baby : ${list}">
+                        <tbody id="tbod">
+                        <tr th:each="baby: ${list}">
                             <td th:text="${baby.id}">1</td>
                             <td th:text="${baby.name}">John Clark</td>
                             <td th:text="${#calendars.format(baby.brithday,'yyyy-MM-dd')}"></td>
-                            <td th:text="${baby.partent_id}">John Clark</td>
+                            <td id="partentname" th:text="${baby.partent_name}"></td><!--th:text="${baby.partent_id}"-->
                             <td>
                                 <div class="am-dropdown" data-am-dropdown="">
                                     <button class="am-btn am-btn-default am-btn-xs am-dropdown-toggle"
@@ -47,6 +72,7 @@
                                     </ul>
                                 </div>
                             </td>
+
                         </tr>
 
 
