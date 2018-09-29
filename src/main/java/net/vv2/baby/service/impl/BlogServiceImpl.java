@@ -50,6 +50,11 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public List<Blog> selectPageBlogById(String key, Integer offset, Integer rows, Integer user_id) {
+        return blogMapper.selectPageBlogById(key,offset,rows,user_id);
+    }
+
+    @Override
     public List<Blog> selectOldBlog(String month, String day,String year) {
         return blogMapper.selectOldBlog(month,day,year);
     }
@@ -68,6 +73,12 @@ public class BlogServiceImpl implements BlogService {
     public int selectKeyCount(String key) {
         return blogMapper.selectKeyCount(key);
     }
+
+    @Override
+    public int selectKeyCountById(String key, Integer user_id) {
+        return blogMapper.selectKeyCountById(key,user_id);
+    }
+
 
     @Override
     public List<Blog> selectAllCognitive() {

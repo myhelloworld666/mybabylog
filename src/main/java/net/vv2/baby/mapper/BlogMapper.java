@@ -183,6 +183,34 @@ public interface BlogMapper {
     })
     List<Blog> selectPageBlog(@Param("key") String key,@Param("offset") Integer offset,@Param("rows") Integer rows);
 
+    /**
+     * 根据user_id
+     * 模糊搜索+分页显示日志
+     * @param key 搜索关键字
+     * @param offset 偏移量
+     * @param rows 行数
+     * @param user_id 用户id
+     * @return 分页数据
+     */
+    @Select("SELECT * FROM bb_blog WHERE (first like CONCAT('%',#{key},'%') OR language like CONCAT('%',#{key},'%') or cognitive like CONCAT('%',#{key},'%') or blog like CONCAT('%',#{key},'%')) and user_id = #{user_id} ORDER BY create_time DESC LIMIT #{offset},#{rows}")
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "first",property = "first"),
+            @Result(column = "language",property = "language"),
+            @Result(column = "cognitive",property = "cognitive"),
+            @Result(column = "blog",property = "blog"),
+            @Result(column = "create_time",property = "create_time"),
+            @Result(column = "update_time",property = "update_time"),
+            @Result(column = "baby_id",property = "baby",
+                    one = @One(
+                            select = "net.vv2.baby.mapper.BabyMapper.selectBabyById",
+                            fetchType = FetchType.EAGER)),
+            @Result(column = "user_id",property = "user",
+                    one = @One(select = "net.vv2.baby.mapper.UserMapper.selectUserById",
+                            fetchType = FetchType.EAGER))
+    })
+    List<Blog> selectPageBlogById(@Param("key") String key,@Param("offset") Integer offset,@Param("rows") Integer rows,@Param("user_id") Integer user_id);
+
 
     /**
      * 返回那年今天的数据
@@ -215,6 +243,13 @@ public interface BlogMapper {
      */
     @Select("select count(*) from bb_blog WHERE first like CONCAT('%',#{key},'%') OR language like CONCAT('%',#{key},'%') or cognitive like CONCAT('%',#{key},'%') or blog like CONCAT('%',#{key},'%')")
     int selectKeyCount(@Param("key") String key);
+
+    /**
+     * 根据user_id返回搜索记录总数
+     * @return
+     */
+    @Select("select count(*) from bb_blog WHERE (first like CONCAT('%',#{key},'%') OR language like CONCAT('%',#{key},'%') or cognitive like CONCAT('%',#{key},'%') or blog like CONCAT('%',#{key},'%')) and user_id = #{user_id}")
+    int selectKeyCountById(@Param("key") String key,@Param("user_id") Integer user_id);
 
 
 

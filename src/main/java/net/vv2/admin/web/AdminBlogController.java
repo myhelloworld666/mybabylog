@@ -43,7 +43,7 @@ public class AdminBlogController {
     @RequestMapping("/blogList")
     public String blogList(@RequestParam(defaultValue = "") String key,
                            @RequestParam(defaultValue = "1") int pageNum,
-                           @RequestParam(defaultValue = "20") int rows,
+                           @RequestParam(defaultValue = "8") int rows,
                            Model model){
 
         System.out.println("key===="+key);

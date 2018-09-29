@@ -250,15 +250,17 @@ public class BlogController {
      * @return
      */
     @RequestMapping("/blog")
-    public String blogList(@RequestParam(defaultValue = "") String key,
-                           @RequestParam(defaultValue = "1") int pageNum,
-                           @RequestParam(defaultValue = "5") int rows,
+    public String blogList(@RequestParam(defaultValue = "") String key,//关键词
+                           @RequestParam(defaultValue = "1") int pageNum,//传回的当前页数
+                           @RequestParam(defaultValue = "5") int rows,//每页显示的记录数量
+                           HttpSession session,
                            Model model){
 
         System.out.println("key===="+key);
         System.out.println("开始查询分页数据");
-        PageHelp pageHelp = new PageHelp(blogService.selectKeyCount(key),pageNum,rows);
-        List<Blog> list = blogService.selectPageBlog(key,pageHelp.getPageArray()[1],pageHelp.getRows());
+        User user = (User)session.getAttribute("user");
+        PageHelp pageHelp = new PageHelp(blogService.selectKeyCountById(key,user.getId()),pageNum,rows);
+        List<Blog> list = blogService.selectPageBlogById(key,pageHelp.getPageArray()[1],pageHelp.getRows(),user.getId());
         //System.out.println("++++++++++++++++++"+pageHelp.getCount());
         model.addAttribute("totalPage",pageHelp.getPageArray()[0]);
         model.addAttribute("pageNum",pageNum);

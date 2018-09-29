@@ -56,6 +56,18 @@ public interface BlogService {
     List<Blog> selectPageBlog(String key,Integer offset,Integer rows);
 
     /**
+     * 根据user_id
+     * 模糊搜索+分页显示日志
+     * @param key 搜索关键字
+     * @param offset 偏移量
+     * @param rows 行数
+     * @param user_id 用户id
+     * @return 分页数据
+     */
+    List<Blog> selectPageBlogById(String key,Integer offset,Integer rows,Integer user_id);
+
+
+    /**
      * 那年今天数据
      * @param month 那年那月
      * @param day 那年今天
@@ -82,6 +94,12 @@ public interface BlogService {
      * @return int
      */
     int selectKeyCount(String key);
+
+    /**
+     * 根据user_id返回搜索日记条数
+     * @return int
+     */
+    int selectKeyCountById(String key,Integer user_id);
 
 
     /**
