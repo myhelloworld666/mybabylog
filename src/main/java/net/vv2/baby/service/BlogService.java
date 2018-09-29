@@ -73,7 +73,7 @@ public interface BlogService {
      * @param day 那年今天
      * @return
      */
-    List<Blog> selectOldBlog(String month,String day,String year);
+    List<Blog> selectOldBlog(String month,String day,String year,Integer user_id,Integer baby_id);
 
 
     /**

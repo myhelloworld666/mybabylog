@@ -216,9 +216,11 @@ public interface BlogMapper {
      * 返回那年今天的数据
      * @param month 那年那月
      * @param day 那年今天
+     * @param user_id 当前用户
+     * @param baby_id 当前宝贝
      * @return list
      */
-    @Select("SELECT * from bb_blog WHERE month(create_time) = ${month} and day(create_time) = ${day} and year(create_time) != #{year} ORDER BY create_time DESC")
+    @Select("SELECT * from bb_blog WHERE month(create_time) = ${month} and day(create_time) = ${day} and year(create_time) != #{year} and user_id = #{user_id} and baby_id = #{baby_id} ORDER BY create_time DESC")
     @Results({
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "first",property = "first"),
@@ -235,7 +237,7 @@ public interface BlogMapper {
                     one = @One(select = "net.vv2.baby.mapper.UserMapper.selectUserById",
                             fetchType = FetchType.EAGER))
     })
-    List<Blog> selectOldBlog(@Param("month") String month,@Param("day") String day,@Param("year") String year);
+    List<Blog> selectOldBlog(@Param("month") String month,@Param("day") String day,@Param("year") String year,@Param("user_id") Integer user_id,@Param("baby_id") Integer baby_id);
 
     /**
      * 返回搜索记录总数

@@ -82,10 +82,12 @@ public class BlogController {
 //        那年今天数据
         Date today = DateUtil.date();
         String year = DateUtil.year(today)+"";
-        System.out.println(year);
+       // System.out.println(year);
         String month = DateUtil.month(today)+1+"";
+      //  System.out.println(month);
         String day = DateUtil.dayOfMonth(today)+"";
-        List<Blog> list = blogService.selectOldBlog(month,day,year);//获得那年今天的历史数据
+       // System.out.println(day);
+        List<Blog> list = blogService.selectOldBlog(month,day,year,partent.getId(),baby.getId());//获得那年今天的历史数据
         //List<Blog> list = blogService.selectAllFirst();
        // List<Blog> list = blogService.selectOldBlog("04","15",year);//测试那年今天的历史数据
 
@@ -252,7 +254,7 @@ public class BlogController {
     @RequestMapping("/blog")
     public String blogList(@RequestParam(defaultValue = "") String key,//关键词
                            @RequestParam(defaultValue = "1") int pageNum,//传回的当前页数
-                           @RequestParam(defaultValue = "5") int rows,//每页显示的记录数量
+                           @RequestParam(defaultValue = "3") int rows,//每页显示的记录数量
                            HttpSession session,
                            Model model){
 
@@ -261,6 +263,12 @@ public class BlogController {
         User user = (User)session.getAttribute("user");
         PageHelp pageHelp = new PageHelp(blogService.selectKeyCountById(key,user.getId()),pageNum,rows);
         List<Blog> list = blogService.selectPageBlogById(key,pageHelp.getPageArray()[1],pageHelp.getRows(),user.getId());
+//        Baby b = new Baby();
+//        for(int i = 0;i < list.size();i++){
+//             b =babyService.selectBabyById(list.get(i).getBaby_id());
+//            System.out.println("++++++++++++++++++"+b.getName());
+//             list.get(i).setBaby(b);
+//        }
         //System.out.println("++++++++++++++++++"+pageHelp.getCount());
         model.addAttribute("totalPage",pageHelp.getPageArray()[0]);
         model.addAttribute("pageNum",pageNum);
@@ -277,9 +285,29 @@ public class BlogController {
      * @return
      */
     @RequestMapping("/firstList")
-    public String firstList(Model model){
-        List<Blog> list = blogService.selectAllFirst();
+    public String firstList(@RequestParam(defaultValue = "") String key,//关键词
+                            @RequestParam(defaultValue = "1") int pageNum,//传回的当前页数
+                            @RequestParam(defaultValue = "4") int rows,//每页显示的记录数量
+                            HttpSession session,
+                            Model model){
+        User user = (User)session.getAttribute("user");
+        PageHelp pageHelp = new PageHelp(blogService.selectKeyCountById(key,user.getId()),pageNum,rows);
+        List<Blog> list = blogService.selectPageBlogById(key,pageHelp.getPageArray()[1],pageHelp.getRows(),user.getId());
+//        Baby b = new Baby();
+//        for(int i = 0;i < list.size();i++){
+//             b =babyService.selectBabyById(list.get(i).getBaby_id());
+//            System.out.println("++++++++++++++++++"+b.getName());
+//             list.get(i).setBaby(b);
+//        }
+        //System.out.println("++++++++++++++++++"+pageHelp.getCount());
+        model.addAttribute("totalPage",pageHelp.getPageArray()[0]);
+        model.addAttribute("pageNum",pageNum);
+        model.addAttribute("key",key);
+        //Blog b = (Blog)list.get(0);
+        // System.out.println("++++++++++++++++++"+b.getBetween()[0]);
         model.addAttribute("list",list);
+//        List<Blog> list = blogService.selectAllFirst();
+//        model.addAttribute("list",list);
         return "/baby/firstList";
     }
 
@@ -289,9 +317,29 @@ public class BlogController {
      * @return
      */
     @RequestMapping("/languageList")
-    public String languageList(Model model){
-        List<Blog> list = blogService.selectAllLanguage();
+    public String languageList(@RequestParam(defaultValue = "") String key,//关键词
+                               @RequestParam(defaultValue = "1") int pageNum,//传回的当前页数
+                               @RequestParam(defaultValue = "4") int rows,//每页显示的记录数量
+                               HttpSession session,
+                               Model model){
+        User user = (User)session.getAttribute("user");
+        PageHelp pageHelp = new PageHelp(blogService.selectKeyCountById(key,user.getId()),pageNum,rows);
+        List<Blog> list = blogService.selectPageBlogById(key,pageHelp.getPageArray()[1],pageHelp.getRows(),user.getId());
+//        Baby b = new Baby();
+//        for(int i = 0;i < list.size();i++){
+//             b =babyService.selectBabyById(list.get(i).getBaby_id());
+//            System.out.println("++++++++++++++++++"+b.getName());
+//             list.get(i).setBaby(b);
+//        }
+        //System.out.println("++++++++++++++++++"+pageHelp.getCount());
+        model.addAttribute("totalPage",pageHelp.getPageArray()[0]);
+        model.addAttribute("pageNum",pageNum);
+        model.addAttribute("key",key);
+        //Blog b = (Blog)list.get(0);
+        // System.out.println("++++++++++++++++++"+b.getBetween()[0]);
         model.addAttribute("list",list);
+//        List<Blog> list = blogService.selectAllLanguage();
+//        model.addAttribute("list",list);
         return "/baby/languageList";
     }
 
@@ -301,9 +349,29 @@ public class BlogController {
      * @return
      */
     @RequestMapping("/cognitiveList")
-    public String cognitiveList(Model model){
-        List<Blog> list = blogService.selectAllCognitive();
+    public String cognitiveList(@RequestParam(defaultValue = "") String key,//关键词
+                                @RequestParam(defaultValue = "1") int pageNum,//传回的当前页数
+                                @RequestParam(defaultValue = "4") int rows,//每页显示的记录数量
+                                HttpSession session,
+                                Model model){
+        User user = (User)session.getAttribute("user");
+        PageHelp pageHelp = new PageHelp(blogService.selectKeyCountById(key,user.getId()),pageNum,rows);
+        List<Blog> list = blogService.selectPageBlogById(key,pageHelp.getPageArray()[1],pageHelp.getRows(),user.getId());
+//        Baby b = new Baby();
+//        for(int i = 0;i < list.size();i++){
+//             b =babyService.selectBabyById(list.get(i).getBaby_id());
+//            System.out.println("++++++++++++++++++"+b.getName());
+//             list.get(i).setBaby(b);
+//        }
+        //System.out.println("++++++++++++++++++"+pageHelp.getCount());
+        model.addAttribute("totalPage",pageHelp.getPageArray()[0]);
+        model.addAttribute("pageNum",pageNum);
+        model.addAttribute("key",key);
+        //Blog b = (Blog)list.get(0);
+        // System.out.println("++++++++++++++++++"+b.getBetween()[0]);
         model.addAttribute("list",list);
+//        List<Blog> list = blogService.selectAllCognitive();
+//        model.addAttribute("list",list);
         return "/baby/cognitiveList";
     }
 

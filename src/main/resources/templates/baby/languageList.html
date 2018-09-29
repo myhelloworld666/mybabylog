@@ -37,6 +37,23 @@
             </ul>
 
         </div>
+        <ul class="am-pagination am-pagination-centered">
+
+
+
+            <th:block th:each="i:${#numbers.sequence(1,totalPage)}">
+                <!-- 判断是否为当前页，添加am-active-->
+                <li th:if="${i == pageNum}" th:class="am-active">
+                    <a th:href="@{/baby/languageList(pageNum=${i},key=${key})}" th:text="${i}">1</a>
+                </li>
+                <!-- 不是当前页普通输出-->
+                <li th:if="${i != pageNum}">
+                    <a th:href="@{/baby/languageList(pageNum=${i},key=${key})}" th:text="${i}">1</a>
+                </li>
+            </th:block>
+
+
+        </ul>
 
 
 

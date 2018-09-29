@@ -30,7 +30,7 @@
 
             <ul class="am-list am-list-static am-list-border am-list-striped am-animation-fade" th:each="blog:${list}"><!---->
                 <li><i class="am-icon-male am-icon-fw"></i>
-                    <span th:text="${blog.user.amilymembers}+': 在 '+${#dates.format(blog.create_time, 'yyyy-MM-dd HH:mm')}+'添加了一条记录.宝贝已经出生'+${blog.getBetween()[0]}+'天'">爸爸:在2012-06-10 12:00:11添加了数据。 宝贝已经出生80天或3个月</span>
+                    <span th:text="${blog.user.amilymembers}+': 在 '+${#dates.format(blog.create_time, 'yyyy-MM-dd HH:mm')}+'添加了一条记录.宝贝'+${blog.baby.name}+'已经出生'+${blog.getBetween()[0]}+'天'">爸爸:在2012-06-10 12:00:11添加了数据。 宝贝已经出生80天或3个月</span>
                 </li>
                 <li class="am-panel-bd" th:if="${blog.first} != ''"><i class="am-icon-thumbs-o-up am-icon-fw"></i>
                     <span th:text="'第一次：'"></span><span th:text="${blog.first}">first。</span></li>

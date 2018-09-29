@@ -101,7 +101,7 @@ public class BlogTest {
     @Test
     public void selectOldBlog(){
         System.out.println(DateUtil.dayOfMonth(new Date()));
-        System.out.println(blogService.selectOldBlog("2017","11","29"));
+        //System.out.println(blogService.selectOldBlog("2017","11","29"));
     }
 
     @Test

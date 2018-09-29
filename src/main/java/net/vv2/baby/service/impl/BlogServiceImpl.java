@@ -55,8 +55,8 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public List<Blog> selectOldBlog(String month, String day,String year) {
-        return blogMapper.selectOldBlog(month,day,year);
+    public List<Blog> selectOldBlog(String month, String day,String year,Integer user_id,Integer baby_id) {
+        return blogMapper.selectOldBlog(month,day,year,user_id,baby_id);
     }
 
     @Override
