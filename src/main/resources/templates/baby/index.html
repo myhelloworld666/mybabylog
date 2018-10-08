@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head th:replace="layout/layout :: htmlhead(title='Baby Log 首页')"></head>
+<head th:replace="layout/layout :: htmlhead(title='Baby Log 首页')" ></head>
 <body class="am-with-topbar-fixed-top am-scrollable-vertical" onload="setindex()">
-<script th:inline="javascript" >
+<script th:inline="javascript">
     // var name = document.getElementById("bname");
     // name.innerText="test";
+    var b = [[${baby.name}]];
+    // alert(b);
+    if(b=="无"||b==null) {//无宝宝时跳转
+        alert("您好，当前用户下无宝宝记录，请先联系管理员添加您的宝宝");
+        window.location.href = "/admin/baby/addBaby";
+    }
     function havebaby() {//判断有无宝贝防止空白页报错
-        var b = new string();
-            b = [[${baby.name}]];
-        alert(b);
-        if(b==""||b==null){//无宝宝时跳转
-            alert("您好，当前用户下无宝宝记录，请先联系管理员添加您的宝宝");
-            window.location.href="/admin/baby/addBaby";
-        }
+        alert("test havebaby");
     }
 
 

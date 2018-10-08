@@ -57,8 +57,9 @@ public class BlogController {
         Baby baby = new Baby();
         if(index==-2){//刚刚登录
             index = 0;
-            if(blist.size()==0){
-                baby = babyService.selectBabyById(0);
+            if(blist.size()==0){//当前用户下无baby记录
+                baby = new Baby("无",new Date());
+//                baby = babyService.selectBabyById(0);
             }
             else{
                 baby = blist.get(index);//返回当前用户对应babylist的第一个baby

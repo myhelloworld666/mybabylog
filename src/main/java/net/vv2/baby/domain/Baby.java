@@ -23,6 +23,9 @@ public class Baby {
 
 
     public Baby(){}
+    public Baby(String name) {
+        this.name = name;
+    }
     public Baby(String name, Date brithday) {
         this.name = name;
         this.brithday = brithday;
