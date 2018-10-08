@@ -2,7 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="layout/layout :: htmlhead(title='Baby Log 首页')"></head>
 <body class="am-with-topbar-fixed-top am-scrollable-vertical" onload="setindex()">
-<script th:inline="javascript">
+<script th:inline="javascript" >
+    // var name = document.getElementById("bname");
+    // name.innerText="test";
+    function havebaby() {//判断有无宝贝防止空白页报错
+        var b = new string();
+            b = [[${baby.name}]];
+        alert(b);
+        if(b==""||b==null){//无宝宝时跳转
+            alert("您好，当前用户下无宝宝记录，请先联系管理员添加您的宝宝");
+            window.location.href="/admin/baby/addBaby";
+        }
+    }
+
+
     function changebaby() {
         var obje = document.getElementById("baby_id");//定位select
       //  obje.selectedIndex = 1;
@@ -23,13 +36,24 @@
 
     }
     function setindex() {
-        var obje = document.getElementById("baby_id");//定位select
-        //  obje.selectedIndex = 1;
-       //
-       // alert("textbackindex");
-        var backindex =[[${index}]];//获取会话index设置下拉框狂显示的宝贝
-       // alert("backindex="+backindex);
-        obje.options[backindex].selected = true;
+        var b = [[${baby.name}]];
+        // alert(b);
+        // alert("test");
+        if(b=="null"||b==null){//无宝宝时跳转
+            alert("您好，当前用户下无宝宝记录，请先添加您的宝宝");
+            window.location.href="/admin/home";
+        }
+        else{
+            var obje = document.getElementById("baby_id");//定位select
+            //  obje.selectedIndex = 1;
+            //
+            // alert("textbackindex");
+            var backindex =[[${index}]];//获取会话index设置下拉框狂显示的宝贝
+            // alert("backindex="+backindex);
+            obje.options[backindex].selected = true;
+        }
+        //
+
     }
 
 </script>
@@ -40,10 +64,10 @@
 <div class="baby_a">
     <div class="am-g am-container">
         <div class="am-u-lg-12 am-u-md-6 am-u-sm-12">
-            <h1 th:text="'您的宝宝:'+${baby.name}">Name:XXX</h1>
+            <h1 id="bname" th:text="'您的宝宝:'+${baby.name}">Name:XXX</h1>
           <!--  onchange= "self.location.href=options[selectedIndex].value"--{id}(id=${mybaby.id})-->
 
-            <p th:text="'出生于:'+${#dates.format(baby.brithday, 'yyyy-MM-dd')}+'，年龄:'+${baby.getAge()}+'，您的孩子已经出生：'+${baby.getBetweenDay()}+'天了。 系统中有关于'+${baby.name}+'的'+${hcount}+'条健康记录和'+${count}+'条日志记录。'">
+            <p id="message" th:text="'出生于:'+${#dates.format(baby.brithday, 'yyyy-MM-dd')}+'，年龄:'+${baby.getAge()}+'，您的孩子已经出生：'+${baby.getBetweenDay()}+'天了。 系统中有关于'+${baby.name}+'的'+${hcount}+'条健康记录和'+${count}+'条日志记录。'">
             </p>
             <a type="button" class="am-btn am-btn-success am-btn-primary am-radius" th:href="@{/baby/blog/}">点击查看所有记录</a>
             <p>点击查看您的其他宝宝</p>

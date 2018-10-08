@@ -57,7 +57,13 @@ public class BlogController {
         Baby baby = new Baby();
         if(index==-2){//刚刚登录
             index = 0;
-            baby = blist.get(index);//返回当前用户对应babylist的第一个baby
+            if(blist.size()==0){
+                baby = babyService.selectBabyById(0);
+            }
+            else{
+                baby = blist.get(index);//返回当前用户对应babylist的第一个baby
+            }
+
             //System.out.println("----------------------------------"+baby);
             session.setAttribute("index",index);//将下拉框索引记录到会话中，作用于已经登录切换回首页时
             session.setAttribute("baby",baby);//echart绘制所需
