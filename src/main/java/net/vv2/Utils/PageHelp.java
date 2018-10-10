@@ -79,7 +79,7 @@ public class PageHelp {
      */
     public int[] getPageArray(){
         if(count == 0){
-            return null;
+            return new int[]{1,0};
         }
         int totalPage = PageUtil.totalPage(count,rows);//根据记录总数获得分页总数
         int offset = (pageNum-1)*rows;//获得当前偏移量。

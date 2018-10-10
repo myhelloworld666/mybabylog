@@ -48,7 +48,11 @@ public class AdminBlogController {
 
         System.out.println("key===="+key);
         System.out.println("后台开始查询分页数据");
+
         PageHelp pageHelp = new PageHelp(blogService.selectKeyCount(key),pageNum,rows);
+//        if(blogService.selectKeyCount("")==0){//系统中无日志
+//
+//        }
         List<Blog> list = blogService.selectPageBlog(key,pageHelp.getPageArray()[1],pageHelp.getRows());
         System.out.println("++++++++++++++++++"+pageHelp.getCount());
         model.addAttribute("totalPage",pageHelp.getPageArray()[0]);

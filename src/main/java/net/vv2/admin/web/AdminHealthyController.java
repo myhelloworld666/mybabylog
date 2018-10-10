@@ -35,6 +35,7 @@ public class AdminHealthyController {
     @RequestMapping("/healthyList")
     public String healthyList(Model model){
         List<Healthy> list = healthyService.selectAll();
+        System.out.println("+++++++++++++++healthlist++++++++++++++++"+list);
         model.addAttribute("list",list);
         return "/admin/healthy/healthyList";
     }

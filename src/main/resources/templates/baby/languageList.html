@@ -2,6 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="layout/layout :: htmlhead(title='宝贝学会的语言')"></head>
 <body class="am-with-topbar-fixed-top am-scrollable-vertical">
+<script th:inline="javascript">
+    var flag =[[${haveblogfalg}]];
+    // alert(flag);
+    if(flag==0){
+        alert("系统中暂无您的日志，请先添加日志！");
+        window.location.href = "/baby/add";
+    }
+</script>
 
 <div th:replace="layout/layout :: header"></div>
 

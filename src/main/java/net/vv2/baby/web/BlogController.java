@@ -108,43 +108,7 @@ public class BlogController {
         model.addAttribute("list",list);
         return "/baby/index";
     }
-//    /**
-//     * 首页
-//     * @param id
-//     * @param model
-//     * @return
-//     */
-//    @RequestMapping(value = "/changebaby/{id}")
-//    public String changebaby(@PathVariable Integer id,Model model,HttpSession session){
-//        //  List<Baby> blist = babyService.selectAllBaby();
-//        User partent = (User) session.getAttribute("user");//获取当前登陆的家长
-//        List<Baby> blist = babyService.selectBabyBypId(partent.getId());//获取当前用户的所有baby
-//        Baby baby = babyService.selectBabyById(id);//返回选中的baby
-//        // Baby baby = babyService.selectBabyById(1);//获取宝贝资料，当然如果有二个或以上的孩子，建议获取所有宝贝。
-//        int count = blogService.selectCount(baby.getId());//返回baby对应日志总记录数
-//        int hcount = healthyService.selectCount(baby.getId());//返回baby对应健康总记录数
-//        //System.out.println("----------------------------------"+hcount);
-//        // System.out.println("----------------------------------"+baby_id);
-//
-////        那年今天数据
-//        Date today = DateUtil.date();
-//        String year = DateUtil.year(today)+"";
-//        System.out.println(year);
-//        String month = DateUtil.month(today)+1+"";
-//        String day = DateUtil.dayOfMonth(today)+"";
-//        // List<Blog> list = blogService.selectOldBlog(month,day,year);//获得那年今天的历史数据
-//        //List<Blog> list = blogService.selectAllFirst();
-//        List<Blog> list = blogService.selectOldBlog("04","15",year);//测试那年今天的历史数据
-//
-//        model.addAttribute("baby",baby);
-//        session.setAttribute("baby",baby);
-//        //  session.setAttribute("blist",blist);
-//        model.addAttribute("blist",blist);
-//        model.addAttribute("count",count);
-//        model.addAttribute("hcount",hcount);
-//        model.addAttribute("list",list);
-//        return "/baby/index";
-//    }
+
 
     @RequestMapping("/add")
     public String addFrom(Model model,HttpSession session){
@@ -263,26 +227,33 @@ public class BlogController {
                            @RequestParam(defaultValue = "1") int pageNum,//传回的当前页数
                            @RequestParam(defaultValue = "3") int rows,//每页显示的记录数量
                            HttpSession session,
-                           Model model){
+                           Model model) {
 
-        System.out.println("key===="+key);
+        System.out.println("key====" + key);
         System.out.println("开始查询分页数据");
-        User user = (User)session.getAttribute("user");
-        PageHelp pageHelp = new PageHelp(blogService.selectKeyCountById(key,user.getId()),pageNum,rows);
-        List<Blog> list = blogService.selectPageBlogById(key,pageHelp.getPageArray()[1],pageHelp.getRows(),user.getId());
-//        Baby b = new Baby();
-//        for(int i = 0;i < list.size();i++){
-//             b =babyService.selectBabyById(list.get(i).getBaby_id());
-//            System.out.println("++++++++++++++++++"+b.getName());
-//             list.get(i).setBaby(b);
-//        }
-        //System.out.println("++++++++++++++++++"+pageHelp.getCount());
-        model.addAttribute("totalPage",pageHelp.getPageArray()[0]);
-        model.addAttribute("pageNum",pageNum);
-        model.addAttribute("key",key);
+        User user = (User) session.getAttribute("user");
+        int haveblogfalg = 1;
+        PageHelp pageHelp = new PageHelp(blogService.selectKeyCountById(key, user.getId()), pageNum, rows);
+//            if (blogService.selectKeyCountById("",user.getId())==0){
+//                haveblogfalg = 0;
+//                model.addAttribute("totalPage", 1);
+//                List<Blog> list = blogService.selectPageBlogById(key, 0, pageHelp.getRows(), user.getId());
+//            }
+//            else {
+        List<Blog> list = blogService.selectPageBlogById(key, pageHelp.getPageArray()[1], pageHelp.getRows(), user.getId());
+        System.out.println("+++++++++pageHelp.getPageArray()[1]+++++++++偏移量" + pageHelp.getPageArray()[1]);
+        System.out.println("+++++++++pageHelp.getPageArray()[0]+++++++++总页数" + pageHelp.getPageArray()[0]);
+        model.addAttribute("totalPage", pageHelp.getPageArray()[0]);
+        model.addAttribute("pageNum", pageNum);
+        model.addAttribute("key", key);
         //Blog b = (Blog)list.get(0);
-       // System.out.println("++++++++++++++++++"+b.getBetween()[0]);
-        model.addAttribute("list",list);
+        // System.out.println("++++++++++++++++++"+b.getBetween()[0]);
+        model.addAttribute("list", list);
+    //}
+            model.addAttribute("haveblogfalg",haveblogfalg);
+
+//        System.out.println("++++++++haveblogfalg++++++++++"+haveblogfalg);
+
         return "/baby/blog";
     }
 
